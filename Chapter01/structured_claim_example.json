@@ -1,0 +1,9 @@
+{
+  "claim": "The customer is eligible for a refund under policy A.",
+  "evidence_ref": "refund_policy_v4:section_3_2",
+  "supporting_excerpt": "Refunds are available within 30 days...",
+  "confidence": "medium",
+  "limitations": [
+    "The order date must be verified before action is taken."
+  ]
+}
