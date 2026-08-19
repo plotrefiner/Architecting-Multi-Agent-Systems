@@ -1,0 +1,6 @@
+{
+  "baseline": "prompt_only",
+  "input": "Can I return this item?",
+  "expected_limitation": "The model cannot know policy or order-specific details.",
+  "result": "not_sufficient"
+}
