@@ -1,0 +1,8 @@
+{
+  "agent": "policy_agent",
+  "status": "failed",
+  "failure_type": "missing_evidence",
+  "message": "No official policy document was found for the requested exception.",
+  "required_next_step": "escalate_to_human_reviewer",
+  "confidence": "low"
+}

@@ -1,0 +1,24 @@
+{
+  "contract_name": "policy_findings_v1",
+  "agent": "policy_agent",
+  "required_fields": {
+    "agent": "string",
+    "status": "success|partial|failed|uncertain",
+    "workflow_id": "string",
+    "policy_findings": "array",
+    "limitations": "array",
+    "recommended_next_step": "string|null"
+  },
+  "policy_finding_schema": {
+    "claim_id": "string",
+    "claim": "string",
+    "source": "string",
+    "section": "string|null",
+    "confidence": "high|medium|low"
+  },
+  "failure_schema": {
+    "failure_type": "missing_input|missing_evidence|conflicting_policy|tool_failure",
+    "message": "string",
+    "recoverable": "boolean"
+  }
+}

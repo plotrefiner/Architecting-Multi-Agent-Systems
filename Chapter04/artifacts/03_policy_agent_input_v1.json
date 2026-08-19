@@ -1,0 +1,24 @@
+{
+  "contract_name": "policy_agent_input_v1",
+  "agent": "policy_agent",
+  "required_fields": {
+    "workflow_id": "string",
+    "user_request": "string",
+    "intent": "string",
+    "policy_scope": "string"
+  },
+  "optional_fields": {
+    "product_category": "string",
+    "region": "string"
+  },
+  "prohibited_fields": [
+    "payment_method",
+    "credit_card_number",
+    "private_customer_notes",
+    "internal_risk_score"
+  ],
+  "invalid_input_behavior": {
+    "missing_required_field": "return_missing_input_status",
+    "prohibited_field_present": "redact_and_log_context_violation"
+  }
+}

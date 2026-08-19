@@ -1,0 +1,14 @@
+{
+  "action_request": {
+    "workflow_id": "refund_case_123",
+    "action_type": "issue_refund",
+    "approved_by": "support_manager_001",
+    "approval_id": "approval_789",
+    "idempotency_key": "refund_case_123_order_456",
+    "inputs": {
+      "customer_id": "cust_123",
+      "order_id": "order_456",
+      "refund_amount": 129.99
+    }
+  }
+}

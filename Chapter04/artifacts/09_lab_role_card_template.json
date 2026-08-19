@@ -1,0 +1,10 @@
+{
+  "agent_name": "",
+  "purpose": "",
+  "primary_responsibilities": [],
+  "non_responsibilities": [],
+  "allowed_tools": [],
+  "prohibited_tools": [],
+  "output_schema": "",
+  "failure_behavior": []
+}

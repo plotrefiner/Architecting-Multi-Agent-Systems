@@ -1,0 +1,33 @@
+{
+  "tools": [
+    {
+      "tool_name": "policy_search",
+      "tool_type": "read_only",
+      "allowed_agents": [
+        "policy_agent",
+        "verifier_agent"
+      ],
+      "approval_required": false,
+      "logging_required": true
+    },
+    {
+      "tool_name": "order_lookup",
+      "tool_type": "read_only",
+      "allowed_agents": [
+        "customer_context_agent"
+      ],
+      "approval_required": false,
+      "logging_required": true
+    },
+    {
+      "tool_name": "issue_refund",
+      "tool_type": "transaction",
+      "allowed_agents": [
+        "action_agent"
+      ],
+      "approval_required": true,
+      "logging_required": true,
+      "reversible": false
+    }
+  ]
+}

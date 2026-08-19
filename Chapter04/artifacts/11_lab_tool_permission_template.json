@@ -1,0 +1,8 @@
+{
+  "tool_name": "",
+  "tool_type": "read_only|write|transaction|external_communication|destructive",
+  "allowed_agents": [],
+  "approval_required": false,
+  "logging_required": true,
+  "reversible": null
+}

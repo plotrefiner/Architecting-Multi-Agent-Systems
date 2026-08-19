@@ -1,0 +1,79 @@
+{
+  "responsibility_matrix": [
+    {
+      "task": "classify_user_intent",
+      "responsible": "router_agent",
+      "accountable": "orchestrator",
+      "prohibited": [
+        "response_writer_agent",
+        "action_agent"
+      ]
+    },
+    {
+      "task": "retrieve_policy_evidence",
+      "responsible": "policy_agent",
+      "accountable": "policy_agent",
+      "informed": [
+        "verifier_agent",
+        "response_writer_agent"
+      ],
+      "prohibited": [
+        "action_agent"
+      ]
+    },
+    {
+      "task": "retrieve_order_context",
+      "responsible": "customer_context_agent",
+      "accountable": "customer_context_agent",
+      "informed": [
+        "policy_agent",
+        "response_writer_agent",
+        "verifier_agent"
+      ],
+      "prohibited": [
+        "router_agent",
+        "response_writer_agent"
+      ]
+    },
+    {
+      "task": "draft_customer_response",
+      "responsible": "response_writer_agent",
+      "accountable": "response_writer_agent",
+      "consulted": [
+        "policy_agent",
+        "customer_context_agent"
+      ],
+      "prohibited": [
+        "action_agent"
+      ]
+    },
+    {
+      "task": "verify_response_claims",
+      "responsible": "verifier_agent",
+      "accountable": "verifier_agent",
+      "consulted": [
+        "policy_agent"
+      ],
+      "prohibited": [
+        "response_writer_agent"
+      ]
+    },
+    {
+      "task": "approve_refund",
+      "responsible": "human_reviewer",
+      "accountable": "human_reviewer",
+      "consulted": [
+        "policy_agent",
+        "customer_context_agent"
+      ],
+      "informed": [
+        "action_agent"
+      ],
+      "prohibited": [
+        "policy_agent",
+        "response_writer_agent",
+        "action_agent"
+      ]
+    }
+  ]
+}

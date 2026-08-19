@@ -1,0 +1,17 @@
+{
+  "contract_name": "",
+  "agent": "",
+  "required_fields": {},
+  "status_values": [
+    "success",
+    "partial",
+    "failed",
+    "uncertain",
+    "needs_human_review"
+  ],
+  "failure_schema": {
+    "failure_type": "",
+    "message": "",
+    "recoverable": true
+  }
+}
