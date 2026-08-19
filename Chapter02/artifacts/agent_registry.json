@@ -1,0 +1,51 @@
+{
+  "agents": [
+    {
+      "name": "router_agent",
+      "responsibility": "Classify user request and route workflow.",
+      "allowed_tools": [],
+      "writes_state": [
+        "intent",
+        "risk_level",
+        "route"
+      ]
+    },
+    {
+      "name": "policy_agent",
+      "responsibility": "Retrieve and interpret policy evidence.",
+      "allowed_tools": [
+        "policy_search"
+      ],
+      "writes_state": [
+        "policy_findings",
+        "policy_uncertainties"
+      ]
+    },
+    {
+      "name": "customer_context_agent",
+      "responsibility": "Retrieve customer and order context.",
+      "allowed_tools": [
+        "order_lookup"
+      ],
+      "writes_state": [
+        "customer_context_summary"
+      ]
+    },
+    {
+      "name": "response_writer_agent",
+      "responsibility": "Draft customer-facing response.",
+      "allowed_tools": [],
+      "writes_state": [
+        "draft_response"
+      ]
+    },
+    {
+      "name": "verifier_agent",
+      "responsibility": "Check whether draft claims are supported by evidence.",
+      "allowed_tools": [],
+      "writes_state": [
+        "verification_result"
+      ]
+    }
+  ]
+}
