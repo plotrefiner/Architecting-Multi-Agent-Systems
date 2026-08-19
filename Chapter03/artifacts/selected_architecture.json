@@ -1,0 +1,25 @@
+{
+  "selected_architecture": "hybrid_multi_agent_workflow",
+  "components": [
+    "deterministic_router",
+    "policy_agent",
+    "customer_context_tool",
+    "refund_rules_engine",
+    "response_writer_agent",
+    "verifier_agent",
+    "human_review_gate"
+  ],
+  "why_not_simpler": [
+    "prompt-only cannot access policy or order data",
+    "RAG alone cannot inspect order-specific context",
+    "rules alone cannot draft natural language responses or handle ambiguity",
+    "single-agent design gives one component too much authority"
+  ],
+  "controls": [
+    "tool permissions",
+    "structured state",
+    "verification",
+    "human approval for refund actions",
+    "audit logging"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "baseline": "rag_pipeline",
+  "retrieves": [
+    "return_policy",
+    "refund_policy"
+  ],
+  "can_answer": [
+    "general return policy questions"
+  ],
+  "cannot_answer": [
+    "whether this specific order is eligible",
+    "whether item condition satisfies return rules",
+    "whether refund action is approved"
+  ],
+  "result": "partially_sufficient"
+}

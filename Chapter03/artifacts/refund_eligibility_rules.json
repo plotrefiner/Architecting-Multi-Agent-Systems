@@ -1,0 +1,10 @@
+{
+  "workflow": "refund_eligibility_rules",
+  "rules": [
+    "delivery_age_days must be less than or equal to return_window_days",
+    "product_category must not be non_returnable",
+    "item_condition must be known",
+    "high_value_refunds require human approval"
+  ],
+  "result": "sufficient_for_standard_cases"
+}

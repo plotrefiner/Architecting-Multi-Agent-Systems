@@ -1,0 +1,13 @@
+{
+  "multi_agent_justification": {
+    "policy_agent": "retrieves and interprets official policy",
+    "response_writer_agent": "generates customer-facing language from approved findings",
+    "verifier_agent": "checks that draft claims are supported"
+  },
+  "supporting_boundaries": {
+    "deterministic_router": "routes known request types without model discretion",
+    "customer_context_tool": "retrieves order information with limited permissions",
+    "refund_rules_engine": "owns deterministic eligibility decisions",
+    "human_review_gate": "routes high-risk or uncertain cases to a human reviewer"
+  }
+}
