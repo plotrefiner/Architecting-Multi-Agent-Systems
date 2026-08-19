@@ -1,0 +1,31 @@
+{
+  "autonomy_policy": {
+    "retrieve_policy_document": {
+      "allowed_without_approval": true,
+      "risk_level": "low"
+    },
+    "lookup_order_status": {
+      "allowed_without_approval": true,
+      "risk_level": "low"
+    },
+    "draft_customer_response": {
+      "allowed_without_approval": true,
+      "risk_level": "medium"
+    },
+    "send_customer_response": {
+      "allowed_without_approval": false,
+      "approval_required": "human_or_policy_gate",
+      "risk_level": "medium"
+    },
+    "issue_refund": {
+      "allowed_without_approval": false,
+      "approval_required": "human_review",
+      "risk_level": "high"
+    },
+    "approve_policy_exception": {
+      "allowed_without_approval": false,
+      "approval_required": "manager_review",
+      "risk_level": "high"
+    }
+  }
+}

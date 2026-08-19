@@ -1,0 +1,14 @@
+{
+  "tool_name": "lookup_order",
+  "description": "Retrieve order details for a verified customer.",
+  "allowed_agents": [
+    "customer_context_agent"
+  ],
+  "access_type": "read_only",
+  "required_inputs": [
+    "customer_id",
+    "order_id"
+  ],
+  "approval_required": false,
+  "logging_required": true
+}

@@ -1,0 +1,19 @@
+{
+  "system_type": "llm_chain",
+  "steps": [
+    {
+      "name": "extract_text",
+      "type": "deterministic_function"
+    },
+    {
+      "name": "summarize_chunks",
+      "type": "llm_call"
+    },
+    {
+      "name": "combine_summaries",
+      "type": "llm_call"
+    }
+  ],
+  "control_flow": "fixed_sequence",
+  "runtime_decision_making": false
+}

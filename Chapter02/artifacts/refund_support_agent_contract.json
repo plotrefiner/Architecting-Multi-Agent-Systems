@@ -1,0 +1,25 @@
+{
+  "agent_name": "refund_support_agent",
+  "goal": "Help determine whether a customer may be eligible for a refund.",
+  "allowed_decisions": [
+    "choose_retrieval_query",
+    "call_order_lookup_tool",
+    "ask_clarifying_question",
+    "recommend_human_review"
+  ],
+  "prohibited_decisions": [
+    "issue_refund",
+    "approve_policy_exception",
+    "send_customer_email_without_review"
+  ],
+  "allowed_tools": [
+    "policy_search",
+    "order_lookup"
+  ],
+  "required_output_schema": "refund_support_result_v1",
+  "stopping_conditions": [
+    "sufficient_evidence_found",
+    "missing_required_information",
+    "human_review_required"
+  ]
+}

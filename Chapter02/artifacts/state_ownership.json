@@ -1,0 +1,12 @@
+{
+  "state_ownership": {
+    "intent": "router_agent",
+    "risk_level": "router_agent",
+    "policy_findings": "policy_agent",
+    "customer_context_summary": "customer_context_agent",
+    "draft_response": "response_writer_agent",
+    "verification_result": "verifier_agent",
+    "human_review_status": "human_review_agent",
+    "final_response": "orchestrator"
+  }
+}

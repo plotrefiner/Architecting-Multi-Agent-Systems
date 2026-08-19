@@ -1,0 +1,25 @@
+{
+  "memory_access_rules": {
+    "router_agent": [
+      "intent_catalog",
+      "task_memory"
+    ],
+    "policy_agent": [
+      "organizational_policy_memory",
+      "task_memory"
+    ],
+    "customer_context_agent": [
+      "task_memory"
+    ],
+    "response_writer_agent": [
+      "approved_policy_findings",
+      "user_communication_preferences",
+      "task_memory"
+    ],
+    "verifier_agent": [
+      "retrieved_evidence",
+      "organizational_policy_memory",
+      "task_memory"
+    ]
+  }
+}
