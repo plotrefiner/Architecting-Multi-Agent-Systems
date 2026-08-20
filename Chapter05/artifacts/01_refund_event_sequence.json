@@ -1,0 +1,14 @@
+{
+  "workflow_id": "refund_case_123",
+  "event_sequence": [
+    "user_request_received",
+    "intent_classified",
+    "refund_intent_detected",
+    "policy_findings_created",
+    "customer_context_retrieved",
+    "refund_rules_evaluated",
+    "draft_response_created",
+    "verification_completed",
+    "workflow_completed"
+  ]
+}
