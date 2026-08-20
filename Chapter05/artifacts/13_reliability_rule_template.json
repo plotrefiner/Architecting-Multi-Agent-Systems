@@ -1,0 +1,7 @@
+{
+  "operation": "",
+  "retryable": true,
+  "max_attempts": 3,
+  "idempotency_required": false,
+  "on_failure": ""
+}

@@ -1,0 +1,11 @@
+{
+  "event_type": "human_review_timed_out",
+  "workflow_id": "refund_case_123",
+  "producer": "human_review_service",
+  "status": "timeout",
+  "payload": {
+    "review_type": "refund_approval",
+    "wait_time_minutes": 1440,
+    "next_step": "escalate_to_manager_queue"
+  }
+}

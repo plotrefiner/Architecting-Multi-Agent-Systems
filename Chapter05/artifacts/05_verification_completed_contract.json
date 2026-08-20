@@ -1,0 +1,27 @@
+{
+  "contract_name": "verification_completed_v1",
+  "event_type": "verification_completed",
+  "required_fields": [
+    "event_id",
+    "workflow_id",
+    "correlation_id",
+    "producer",
+    "timestamp",
+    "schema_version",
+    "status",
+    "payload"
+  ],
+  "status_values": [
+    "success",
+    "partial",
+    "failed",
+    "uncertain"
+  ],
+  "payload_schema": {
+    "supported_claims": "array",
+    "unsupported_claims": "array",
+    "uncertain_claims": "array",
+    "requires_revision": "boolean",
+    "requires_human_review": "boolean"
+  }
+}

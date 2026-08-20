@@ -1,0 +1,9 @@
+{
+  "agent_name": "",
+  "consumes_events": [],
+  "produces_events": [],
+  "reads_state": [],
+  "writes_state": [],
+  "allowed_tools": [],
+  "failure_behavior": {}
+}

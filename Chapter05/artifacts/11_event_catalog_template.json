@@ -1,0 +1,8 @@
+{
+  "event_type": "",
+  "producer": "",
+  "consumers": [],
+  "required_payload_fields": [],
+  "failure_event": "",
+  "schema_version": "1.0"
+}

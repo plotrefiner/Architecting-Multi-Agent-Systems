@@ -1,0 +1,24 @@
+{
+  "agent_name": "policy_agent",
+  "consumes_events": [
+    "refund_intent_detected"
+  ],
+  "reads_state": [
+    "workflow_id",
+    "user_request",
+    "intent",
+    "product_category",
+    "region"
+  ],
+  "allowed_tools": [
+    "policy_search"
+  ],
+  "produces_events": [
+    "policy_findings_created",
+    "policy_retrieval_failed"
+  ],
+  "writes_state": [
+    "policy_findings",
+    "policy_uncertainties"
+  ]
+}

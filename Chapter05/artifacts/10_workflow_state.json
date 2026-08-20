@@ -1,0 +1,12 @@
+{
+  "workflow_id": "refund_case_123",
+  "current_status": "in_progress",
+  "current_step": "intent_classification",
+  "completed_steps": [],
+  "pending_steps": [],
+  "agent_outputs": {},
+  "tool_results": {},
+  "approval_status": "not_required",
+  "retry_counts": {},
+  "errors": []
+}

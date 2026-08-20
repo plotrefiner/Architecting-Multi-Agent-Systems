@@ -1,0 +1,20 @@
+{
+  "event_type": "policy_findings_created",
+  "workflow_id": "refund_case_123",
+  "producer": "policy_agent",
+  "status": "partial",
+  "payload": {
+    "policy_findings": [
+      {
+        "claim_id": "claim_001",
+        "claim": "Refunds are available within 30 days of delivery.",
+        "source_id": "refund_policy_v4",
+        "section": "3.2",
+        "confidence": "high"
+      }
+    ],
+    "limitations": [
+      "Item condition has not been verified."
+    ]
+  }
+}

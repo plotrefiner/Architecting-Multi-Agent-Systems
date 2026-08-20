@@ -1,0 +1,17 @@
+{
+  "retry_policy": {
+    "retryable_errors": [
+      "timeout",
+      "temporary_rate_limit",
+      "transient_service_unavailable"
+    ],
+    "non_retryable_errors": [
+      "permission_denied",
+      "missing_required_input",
+      "policy_violation"
+    ],
+    "max_attempts": 3,
+    "backoff": "exponential",
+    "on_failure": "publish_failure_event"
+  }
+}

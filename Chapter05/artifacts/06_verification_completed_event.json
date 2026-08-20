@@ -1,0 +1,22 @@
+{
+  "event_type": "verification_completed",
+  "event_id": "evt_789",
+  "workflow_id": "refund_case_123",
+  "correlation_id": "req_456",
+  "producer": "verifier_agent",
+  "timestamp": "2026-01-15T10:45:00Z",
+  "schema_version": "1.0",
+  "status": "success",
+  "payload": {
+    "supported_claims": [
+      "claim_001"
+    ],
+    "unsupported_claims": [],
+    "uncertain_claims": [
+      "claim_002"
+    ],
+    "requires_revision": true,
+    "requires_human_review": false
+  },
+  "error": null
+}

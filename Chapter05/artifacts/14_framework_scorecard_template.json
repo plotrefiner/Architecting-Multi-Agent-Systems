@@ -1,0 +1,13 @@
+{
+  "framework_name": "",
+  "supports_graph_workflows": "",
+  "supports_stateful_execution": "",
+  "supports_conditional_routing": "",
+  "supports_parallel_execution": "",
+  "supports_human_in_the_loop": "",
+  "supports_tracing": "",
+  "supports_retries": "",
+  "supports_async_execution": "",
+  "fits_existing_stack": "",
+  "decision": ""
+}

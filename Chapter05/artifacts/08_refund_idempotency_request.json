@@ -1,0 +1,8 @@
+{
+  "action": "issue_refund",
+  "workflow_id": "refund_case_123",
+  "order_id": "order_456",
+  "idempotency_key": "refund_case_123_order_456",
+  "amount": 129.99,
+  "approval_id": "approval_789"
+}
