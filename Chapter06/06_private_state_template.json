@@ -1,9 +1,0 @@
-{
-  "agent": "policy_agent",
-  "private_state": {
-    "temporary_notes": [],
-    "candidate_outputs": [],
-    "rejected_sources": [],
-    "tool_attempts": []
-  }
-}
