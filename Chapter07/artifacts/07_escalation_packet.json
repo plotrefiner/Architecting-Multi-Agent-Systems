@@ -1,0 +1,32 @@
+{
+  "escalation_id": "esc_501",
+  "workflow_id": "refund_case_123",
+  "state_version": 5,
+  "requested_authority": "resolve_refund_chargeback_exception",
+  "reason_codes": [
+    "conflicting_outcomes",
+    "financial_authority_required"
+  ],
+  "customer_request_ref": "request:req_789",
+  "accepted_artifacts": [
+    "pf_101",
+    "order_202",
+    "chargeback_303"
+  ],
+  "attempted_routes": [
+    "route_203"
+  ],
+  "unresolved_questions": [
+    "whether replacement may proceed while chargeback remains open"
+  ],
+  "proposed_options": [
+    "pause_for_chargeback_resolution",
+    "manual_exception_review"
+  ],
+  "potential_impact": {
+    "financial": true,
+    "customer_visible": true
+  },
+  "context_manifest_ref": "context:review:ctx_501",
+  "expires_at": "2026-08-04T15:00:00Z"
+}

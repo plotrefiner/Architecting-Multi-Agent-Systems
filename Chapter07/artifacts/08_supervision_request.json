@@ -1,0 +1,21 @@
+{
+  "supervision_request_id": "sup_req_601",
+  "workflow_id": "refund_case_123",
+  "state_version": 3,
+  "purpose": "select_responsibilities_for_composite_support_case",
+  "request_facts": [
+    "customer_reports_item_damaged",
+    "customer_reports_chargeback_open",
+    "customer_requests_replacement"
+  ],
+  "available_responsibilities_ref": "worker_registry_v1",
+  "context_manifest_ref": "context:supervisor:ctx_601",
+  "required_output": "routing_decision_v1",
+  "deadline": "2026-08-03T15:00:20Z",
+  "excluded": [
+    "payment_credentials",
+    "private_customer_notes",
+    "approval_interface",
+    "action_tools"
+  ]
+}

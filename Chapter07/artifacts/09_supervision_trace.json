@@ -1,0 +1,27 @@
+{
+  "workflow_id": "refund_case_123",
+  "supervision_trace": [
+    {
+      "decision": "select_responsibilities",
+      "outputs": [
+        "refund_policy",
+        "order_summary",
+        "chargeback_status"
+      ],
+      "controller_result": "accepted"
+    },
+    {
+      "decision": "aggregate_artifacts",
+      "inputs": [
+        "pf_101",
+        "order_202",
+        "chargeback_303"
+      ],
+      "conflict": "replacement_may_conflict_with_open_chargeback",
+      "controller_result": "human_authority_required"
+    }
+  ],
+  "supervisor_tool_calls": [],
+  "supervisor_state_writes": [],
+  "terminal_supervision_status": "escalated_with_evidence"
+}

@@ -1,0 +1,26 @@
+{
+  "supervision_justification_template": {
+    "workflow_path": "",
+    "deterministic_route_available": true,
+    "routing_uncertainty": "low|medium|high",
+    "aggregation_need": "none|mechanical|semantic",
+    "authority_boundary": "none|human_required|action_required",
+    "supervisor_required": false,
+    "reason": ""
+  },
+  "worker_template": {
+    "worker": "",
+    "accepts": [],
+    "output": "",
+    "risk": "",
+    "allowed_tools": [],
+    "owner": ""
+  },
+  "recovery_policy_template": {
+    "failure_type": "",
+    "permitted_recovery": "retry|reroute|redelegate|escalate|safe_stop",
+    "maximum_attempts": 1,
+    "requires_human_authority": false,
+    "notes": ""
+  }
+}

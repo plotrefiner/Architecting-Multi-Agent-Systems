@@ -1,0 +1,24 @@
+{
+  "delegation_id": "del_301",
+  "workflow_id": "refund_case_123",
+  "state_version": 3,
+  "parent_decision_id": "route_203",
+  "responsibility": "retrieve_order",
+  "assigned_worker": "order_lookup_service",
+  "input_contract": "order_lookup_request_v1",
+  "input_refs": [
+    "order_id:order_456"
+  ],
+  "context_manifest_ref": "context:order_lookup:ctx_301",
+  "evidence_scope": "order_lookup:order_456",
+  "output_contract": "order_summary_v1",
+  "acceptance_criteria": [
+    "snapshot_time_present",
+    "delivery_and_item_status_present",
+    "payment_details_absent"
+  ],
+  "deadline": "2026-08-03T15:01:00Z",
+  "maximum_attempts": 2,
+  "delegation_depth": 1,
+  "may_redelegate": false
+}
