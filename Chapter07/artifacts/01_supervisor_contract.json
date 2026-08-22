@@ -1,0 +1,20 @@
+{
+  "component": "case_supervisor",
+  "purpose": "route_and_accept_ambiguous_composite_support_work",
+  "may_decide": [
+    "select_registered_responsibilities",
+    "propose_contextual_clarification",
+    "propose_aggregation_outcome",
+    "recommend_human_escalation"
+  ],
+  "must_not": [
+    "change_workflow_state",
+    "approve_policy_exception",
+    "execute_customer_action",
+    "expand_worker_permissions",
+    "create_long_term_memory"
+  ],
+  "output_contract": "supervision_decision_v1",
+  "maximum_delegation_depth": 1,
+  "human_owner": "customer_support_operations"
+}
