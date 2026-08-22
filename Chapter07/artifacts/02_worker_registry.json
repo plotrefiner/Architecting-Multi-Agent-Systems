@@ -1,0 +1,45 @@
+{
+  "worker_registry": [
+    {
+      "worker": "policy_retrieval_service",
+      "accepts": [
+        "retrieve_policy"
+      ],
+      "output": "policy_findings_v1",
+      "risk": "read_only"
+    },
+    {
+      "worker": "order_lookup_service",
+      "accepts": [
+        "retrieve_order"
+      ],
+      "output": "order_summary_v1",
+      "risk": "restricted_read"
+    },
+    {
+      "worker": "chargeback_lookup_service",
+      "accepts": [
+        "retrieve_chargeback_status"
+      ],
+      "output": "chargeback_status_v1",
+      "risk": "restricted_read"
+    },
+    {
+      "worker": "case_agent",
+      "accepts": [
+        "resolve_contextual_ambiguity",
+        "draft_response"
+      ],
+      "output": "case_agent_output_v1",
+      "risk": "language_only"
+    },
+    {
+      "worker": "verifier_agent",
+      "accepts": [
+        "verify_supported_claims"
+      ],
+      "output": "verification_result_v1",
+      "risk": "read_only"
+    }
+  ]
+}

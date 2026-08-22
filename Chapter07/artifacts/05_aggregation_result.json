@@ -1,0 +1,30 @@
+{
+  "aggregation_id": "agg_401",
+  "workflow_id": "refund_case_123",
+  "state_version": 5,
+  "rule": "all_required_with_human_resolution_on_conflict",
+  "required_responsibilities": [
+    "retrieve_policy",
+    "retrieve_order",
+    "retrieve_chargeback_status"
+  ],
+  "accepted_artifacts": [
+    "pf_101",
+    "order_202",
+    "chargeback_303"
+  ],
+  "missing_responsibilities": [],
+  "excluded_artifacts": [],
+  "conflicts": [
+    "refund_and_chargeback_actions_may_be_incompatible"
+  ],
+  "supported_conclusions": [
+    "item_reported_damaged",
+    "chargeback_open"
+  ],
+  "prohibited_conclusions": [
+    "refund_approved",
+    "replacement_approved"
+  ],
+  "recommended_transition": "human_authority_required"
+}
