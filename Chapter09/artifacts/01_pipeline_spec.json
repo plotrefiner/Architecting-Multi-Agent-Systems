@@ -1,0 +1,34 @@
+{
+  "pipeline_id": "refund_policy_only_v1",
+  "workflow_graph_spec": "refund_support_workflow_graph_v1",
+  "stages": [
+    {
+      "stage": "classify_intent",
+      "owner": "intent_router",
+      "output_contract": "intent_classification_v1"
+    },
+    {
+      "stage": "retrieve_policy",
+      "owner": "policy_retrieval_service",
+      "input_contract": "policy_retrieval_request_v1",
+      "output_contract": "policy_findings_v1"
+    },
+    {
+      "stage": "draft_policy_response",
+      "responsibility": "draft_response",
+      "owner": "case_agent",
+      "context_purpose": "policy_only_response",
+      "output_contract": "case_agent_output_v1"
+    }
+  ],
+  "optional_stage": {
+    "stage": "verify_supported_claims",
+    "owner": "verifier_agent",
+    "retention_condition": "measured_quality_lift_above_threshold"
+  },
+  "terminal_outcomes": [
+    "response_ready",
+    "insufficient_evidence",
+    "failed"
+  ]
+}
