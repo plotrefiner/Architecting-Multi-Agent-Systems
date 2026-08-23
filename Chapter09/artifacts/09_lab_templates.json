@@ -1,0 +1,75 @@
+{
+  "pipeline_path_template": {
+    "path": "",
+    "reason_pipeline_is_sufficient": "",
+    "stages": [],
+    "optional_stages": [],
+    "terminal_outcomes": []
+  },
+  "artifact_gate_template": {
+    "artifact_contract": "",
+    "producer": "",
+    "responsibility": "",
+    "input_state_version": 1,
+    "context_manifest_ref": "",
+    "evidence_refs": [],
+    "payload_ref": "",
+    "decision_scope": "",
+    "gates": [
+      "contract",
+      "ownership",
+      "currency",
+      "scope",
+      "coverage",
+      "authority"
+    ],
+    "failure_outcomes": {}
+  },
+  "node_edge_template": {
+    "node": {
+      "node_id": "",
+      "node_type": "deterministic|service|agent|supervisor|wait|human_authority|action|terminal",
+      "owner": "",
+      "responsibility": "",
+      "context_purpose": "",
+      "output_contract": "",
+      "maximum_attempts": 1,
+      "may_write_graph_state": false,
+      "may_select_successor": false,
+      "failure_destination": ""
+    },
+    "edge": {
+      "edge_id": "",
+      "source": "",
+      "destination": "",
+      "owner": "workflow_controller",
+      "guard": "",
+      "required_evidence": [],
+      "authority_check": "",
+      "timeout_policy": "",
+      "failure_destination": ""
+    }
+  },
+  "join_loop_template": {
+    "join": {
+      "join_id": "",
+      "required": [],
+      "optional": [],
+      "acceptance": "",
+      "deadline_behavior": "",
+      "conflict_behavior": "",
+      "state_commit_owner": "workflow_controller"
+    },
+    "loop": {
+      "loop_id": "",
+      "entry_edge": "",
+      "owner": "workflow_controller",
+      "progress_contract": "",
+      "maximum_iterations": 1,
+      "deadline_ref": "workflow_deadline",
+      "permitted_nodes": [],
+      "exit_edges": [],
+      "on_exhaustion": "safe_stop"
+    }
+  }
+}

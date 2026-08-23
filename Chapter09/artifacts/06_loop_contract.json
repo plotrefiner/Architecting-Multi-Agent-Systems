@@ -1,0 +1,18 @@
+{
+  "loop_id": "response_revision_v1",
+  "entry_edge": "verification_requires_redraft",
+  "owner": "workflow_controller",
+  "progress_contract": "unsupported_claims_resolved_v1",
+  "maximum_iterations": 1,
+  "shared_budget_ref": "supervision_budget_v1",
+  "deadline_ref": "workflow_deadline",
+  "permitted_nodes": [
+    "draft_conditional_response",
+    "verify_supported_claims"
+  ],
+  "exit_edges": [
+    "claims_supported",
+    "revision_budget_exhausted"
+  ],
+  "on_exhaustion": "safe_stop"
+}

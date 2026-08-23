@@ -1,0 +1,17 @@
+{
+  "artifact_id": "pf_101",
+  "artifact_contract": "policy_findings_v1",
+  "producer": "policy_retrieval_service",
+  "responsibility": "retrieve_policy",
+  "workflow_id": "refund_case_123",
+  "delegation_id": "del_701",
+  "input_state_version": 4,
+  "context_manifest_ref": "context:policy:ctx_701",
+  "evidence_scope": "approved_refund_policy:region_us",
+  "evidence_refs": [
+    "policy:v4:section3.2"
+  ],
+  "payload_ref": "artifact_payload:pf_101",
+  "created_at": "2026-08-03T15:00:08Z",
+  "decision_scope": "evidence_only_not_eligibility_or_approval"
+}

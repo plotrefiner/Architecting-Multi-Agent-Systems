@@ -1,0 +1,39 @@
+{
+  "graph_id": "enterprise_document_analysis_v1",
+  "state_owner": "workflow_controller",
+  "start": "validate_package",
+  "nodes": {
+    "validate_package": "deterministic",
+    "await_metadata": "wait",
+    "run_ocr": "service",
+    "segment_clauses": "service",
+    "retrieve_playbook": "service",
+    "join_document_evidence": "controller",
+    "analyze_clauses": "agent",
+    "await_authorized_review": "human_wait",
+    "publish_risk_brief": "controller",
+    "completed": "terminal",
+    "safe_stop": "terminal"
+  },
+  "conditions": {
+    "metadata_missing": "await_metadata",
+    "image_pages_present": "run_ocr",
+    "evidence_complete": "analyze_clauses",
+    "review_threshold_triggered": "await_authorized_review",
+    "review_recorded": "publish_risk_brief"
+  },
+  "join": {
+    "required": [
+      "contract_clauses",
+      "approved_playbook_findings"
+    ],
+    "conditionally_required": {
+      "ocr_quality_report": "image_pages_present"
+    },
+    "owner": "workflow_controller"
+  },
+  "terminal_outcomes": [
+    "completed",
+    "safe_stop"
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "join_id": "refund_evidence_join_v1",
+  "required": [
+    "retrieve_policy",
+    "retrieve_order",
+    "retrieve_chargeback_status"
+  ],
+  "optional": [],
+  "acceptance": "all_required_artifacts_pass_named_gates",
+  "deadline_behavior": "record_missing_and_apply_failure_policy",
+  "conflict_behavior": "bounded_aggregation_then_human_if_authority_required",
+  "state_commit_owner": "workflow_controller"
+}

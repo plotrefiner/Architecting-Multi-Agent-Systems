@@ -1,0 +1,47 @@
+{
+  "workflow_graph_spec": "refund_support_workflow_graph_v1",
+  "architecture_decision_ref": "ADR-refund-support-001",
+  "responsibility_spec_ref": "refund_support_roles_v1",
+  "orchestration_spec_ref": "refund_support_orchestration_v1",
+  "information_spec_ref": "refund_support_information_v1",
+  "supervision_spec_ref": "refund_support_supervision_v1",
+  "delivery_spec_ref": "refund_support_delivery_v1",
+  "state_owner": "workflow_controller",
+  "authority_components": {
+    "human_decision": "human_approval_service",
+    "approved_action": "approved_action_service"
+  },
+  "graph_contracts": {
+    "node": "workflow_node_v1",
+    "edge": "workflow_edge_v1",
+    "artifact_gate": "artifact_gate_v1",
+    "join": "artifact_join_v1",
+    "wait": "durable_wait_v1",
+    "loop": "bounded_loop_v1"
+  },
+  "authority_rules": [
+    "edges_do_not_expand_responsibility",
+    "context_is_projected_per_node_purpose",
+    "supervisor_outputs_are_proposals",
+    "human_decisions_are_scoped_and_expiring",
+    "approved_action_requires_complete_current_command"
+  ],
+  "graph_rules": {
+    "unknown_node_or_edge": "reject",
+    "unowned_edge": "reject",
+    "unbounded_cycle": "reject",
+    "missing_failure_destination": "reject",
+    "waits_release_compute": true,
+    "loop_counters_survive_restart": true
+  },
+  "required_tests": [
+    "policy_only_uses_short_pipeline",
+    "draft_nodes_use_task_specific_context_projections",
+    "missing_order_uses_controller_wait",
+    "composite_join_requires_registered_artifacts",
+    "agent_cannot_select_action_edge",
+    "loop_requires_progress_and_budget",
+    "approval_replay_cannot_repeat_action",
+    "complete_approved_command_precedes_effect"
+  ]
+}

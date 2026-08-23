@@ -1,0 +1,52 @@
+{
+  "graph_id": "refund_support_workflow_graph_v1",
+  "state_owner": "workflow_controller",
+  "start": "classify_intent",
+  "nodes": {
+    "classify_intent": "deterministic",
+    "request_required_fields": "controller",
+    "await_customer_input": "wait",
+    "retrieve_policy": "service",
+    "retrieve_order": "service",
+    "retrieve_chargeback_status": "service",
+    "join_evidence": "controller",
+    "route_composite": "supervisor",
+    "aggregate_composite": "supervisor",
+    "draft_response": "agent",
+    "await_human_authority": "human_wait",
+    "execute_approved_action": "action",
+    "release_response": "controller",
+    "completed": "terminal",
+    "safe_stop": "terminal"
+  },
+  "edge_groups": {
+    "policy_only": [
+      "classify_intent",
+      "retrieve_policy",
+      "draft_response",
+      "release_response",
+      "completed"
+    ],
+    "missing_order_id": [
+      "classify_intent",
+      "request_required_fields",
+      "await_customer_input",
+      "classify_intent"
+    ],
+    "composite_case": [
+      "classify_intent",
+      "route_composite",
+      "retrieve_policy",
+      "retrieve_order",
+      "retrieve_chargeback_status",
+      "join_evidence",
+      "aggregate_composite",
+      "draft_response",
+      "await_human_authority",
+      "execute_approved_action",
+      "release_response",
+      "completed"
+    ]
+  },
+  "default_failure_destination": "safe_stop"
+}

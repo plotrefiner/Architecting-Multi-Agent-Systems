@@ -1,0 +1,18 @@
+{
+  "node_id": "draft_conditional_response",
+  "node_type": "agent",
+  "owner": "case_agent",
+  "responsibility": "draft_response",
+  "input_contract": "case_agent_drafting_input_v1",
+  "context_purpose": "draft_response",
+  "output_contract": "case_agent_output_v1",
+  "deadline_seconds": 20,
+  "maximum_attempts": 2,
+  "may_write_graph_state": false,
+  "may_select_successor": false,
+  "prohibited_outputs": [
+    "approval_id",
+    "refund_executed"
+  ],
+  "failure_destination": "draft_failed"
+}
