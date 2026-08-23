@@ -1,0 +1,19 @@
+{
+  "operation": "retrieve_chargeback_status",
+  "selected_mode": "queue",
+  "reasons": [
+    "external_latency",
+    "bursty_cases",
+    "durable_recovery"
+  ],
+  "owner": "chargeback_lookup_service",
+  "durable_state_owner": "workflow_controller",
+  "maximum_queue_age_seconds": 120,
+  "ordering_scope": "workflow_id",
+  "delivery_assumption": "at_least_once",
+  "safe_to_restart": true,
+  "not_selected": {
+    "direct_call": "exceeds_request_latency_budget",
+    "pub_sub": "exactly_one_worker_should_claim_each_task"
+  }
+}
