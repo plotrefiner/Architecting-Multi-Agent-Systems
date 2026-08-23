@@ -1,0 +1,20 @@
+{
+  "dead_letter_id": "dlq_001",
+  "message_id": "evt_worker_result_456",
+  "original_message_ref": "encrypted://messages/evt_worker_result_456",
+  "destination": "refund_controller.results.v1",
+  "consumer": "workflow_controller",
+  "failure_class": "unsupported_schema_version",
+  "observed_schema_version": 3,
+  "attempts": 1,
+  "first_failed_at": "2026-08-03T15:05:00Z",
+  "last_failed_at": "2026-08-03T15:05:00Z",
+  "workflow_deadline": "2026-08-03T16:00:00Z",
+  "owner": "refund_platform_operations",
+  "replay_requires": [
+    "compatible_consumer",
+    "operator_approval"
+  ],
+  "retention_until": "2026-09-02T15:05:00Z",
+  "payload_hash": "sha256:19bc..."
+}

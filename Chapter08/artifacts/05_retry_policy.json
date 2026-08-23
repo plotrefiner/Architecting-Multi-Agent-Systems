@@ -1,0 +1,25 @@
+{
+  "operation": "retrieve_policy",
+  "retry_owner": "workflow_controller",
+  "delivery_assumption": "at_least_once",
+  "maximum_attempts": 3,
+  "retry_on": [
+    "timeout",
+    "rate_limited",
+    "temporarily_unavailable"
+  ],
+  "never_retry": [
+    "contract_invalid",
+    "permission_denied",
+    "missing_required_input",
+    "policy_conflict"
+  ],
+  "backoff": {
+    "type": "exponential_with_jitter",
+    "initial_seconds": 2,
+    "maximum_seconds": 30
+  },
+  "attempt_timeout_seconds": 8,
+  "workflow_deadline_required": true,
+  "after_exhaustion": "policy_findings_unavailable"
+}

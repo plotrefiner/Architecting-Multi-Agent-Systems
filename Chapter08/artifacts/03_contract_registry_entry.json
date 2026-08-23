@@ -1,0 +1,32 @@
+{
+  "contract": "delegated_task_completed",
+  "version": 1,
+  "message_kind": "event",
+  "authorized_producers": [
+    "registered_worker_adapter"
+  ],
+  "required_envelope": [
+    "envelope_version",
+    "message_id",
+    "message_kind",
+    "message_type",
+    "schema",
+    "workflow_id",
+    "causation_id",
+    "producer",
+    "occurred_at",
+    "state_version",
+    "data_classification"
+  ],
+  "payload_schema_ref": "schema://delegated_task_completed/v1",
+  "compatibility": "backward",
+  "ordering_scope": "workflow_id",
+  "retention_days": 30,
+  "expected_consumers": [
+    "workflow_controller",
+    "audit_projector"
+  ],
+  "on_unknown_version": "quarantine",
+  "on_inactive_or_invalidated_delegation": "reject_and_record",
+  "replay_policy": "authorized_projections_only_no_commands"
+}

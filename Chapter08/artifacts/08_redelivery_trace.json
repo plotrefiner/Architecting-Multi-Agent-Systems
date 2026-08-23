@@ -1,0 +1,23 @@
+{
+  "workflow_id": "refund_case_123",
+  "trace": [
+    {
+      "message_id": "cmd_refund_810",
+      "type": "execute_approved_refund",
+      "delivery_attempt": 1,
+      "consumer_result": "response_lost_after_provider_commit"
+    },
+    {
+      "message_id": "cmd_refund_810",
+      "type": "execute_approved_refund",
+      "delivery_attempt": 2,
+      "idempotency_result": "existing_outcome_returned"
+    },
+    {
+      "message_id": "evt_refund_811",
+      "type": "refund_execution_completed",
+      "provider_effect_count": 1,
+      "controller_result": "terminal_state_committed"
+    }
+  ]
+}

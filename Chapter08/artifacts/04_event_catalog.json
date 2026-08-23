@@ -1,0 +1,31 @@
+{
+  "event_catalog": [
+    {
+      "event_type": "routing_decision_proposed",
+      "class": "agent",
+      "producer": "case_supervisor",
+      "authority": "proposal_only",
+      "payload_ref": "routing_decision_v1"
+    },
+    {
+      "event_type": "delegation_commands_issued",
+      "class": "system",
+      "producer": "workflow_controller",
+      "authority": "committed_transition",
+      "state_version_required": true
+    },
+    {
+      "event_type": "exception_review_approved",
+      "class": "human",
+      "producer": "human_approval_service",
+      "authority": "named_workflow_amount_and_expiry"
+    },
+    {
+      "event_type": "refund_execution_completed",
+      "class": "tool",
+      "producer": "approved_action_service",
+      "authority": "observed_external_effect",
+      "idempotency_key_required": true
+    }
+  ]
+}

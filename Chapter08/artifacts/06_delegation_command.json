@@ -1,0 +1,37 @@
+{
+  "envelope_version": 1,
+  "message_id": "cmd_policy_701",
+  "message_kind": "command",
+  "message_type": "retrieve_policy",
+  "schema": {
+    "name": "delegation_command",
+    "version": 1
+  },
+  "workflow_id": "refund_case_123",
+  "correlation_id": "req_789",
+  "causation_id": "route_203",
+  "producer": {
+    "component": "workflow_controller"
+  },
+  "occurred_at": "2026-08-03T15:00:00Z",
+  "data_classification": "confidential",
+  "delegation_id": "del_701",
+  "delegation_contract": "delegation_envelope_v1",
+  "intended_responsibility": "retrieve_policy",
+  "expected_state_version": 4,
+  "task": {
+    "input_contract": "policy_retrieval_request_v1",
+    "artifact_contract": "policy_findings_v1",
+    "context_manifest_ref": "context:policy:ctx_701",
+    "evidence_scope": "approved_refund_policy:region_us",
+    "acceptance_criteria_ref": "policy_findings_acceptance_v1",
+    "deadline": "2026-08-03T15:00:20Z",
+    "idempotency_key": "refund_case_123:policy_findings:v4"
+  },
+  "prohibited": [
+    "decide_refund_eligibility",
+    "approve_exception",
+    "execute_customer_action",
+    "redelegate_task"
+  ]
+}

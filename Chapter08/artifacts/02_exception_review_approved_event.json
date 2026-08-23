@@ -1,0 +1,39 @@
+{
+  "envelope_version": 1,
+  "message_id": "evt_approval_456",
+  "message_kind": "event",
+  "message_type": "exception_review_approved",
+  "schema": {
+    "name": "exception_review_approved",
+    "version": 1
+  },
+  "workflow_id": "refund_case_123",
+  "correlation_id": "req_789",
+  "causation_id": "cmd_request_review_006",
+  "producer": {
+    "component": "human_approval_service",
+    "responsibility_version": "refund_support_roles_v1"
+  },
+  "occurred_at": "2026-08-03T15:04:05Z",
+  "state_version": 8,
+  "subject": {
+    "type": "refund_case",
+    "id": "refund_case_123"
+  },
+  "data_classification": "confidential",
+  "payload": {
+    "action_request_id": "act_1042",
+    "approval_id": "approval_456",
+    "decision": "approved",
+    "approved_action": "issue_refund",
+    "approved_by": "support_manager",
+    "order_id": "order_456",
+    "item_id": "item_1",
+    "approved_amount": 129.99,
+    "currency": "USD",
+    "policy_version": "4",
+    "reviewed_state_version": 7,
+    "evidence_snapshot_ref": "evidence_snapshot:refund_case_123:v7",
+    "expires_at": "2026-08-03T16:00:00Z"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "delivery_admission_template": {
+    "operation": "",
+    "wait_required": false,
+    "independent_consumers": false,
+    "slow_or_bursty_work": false,
+    "crash_recovery_required": false,
+    "audit_fact_required": false,
+    "selected_mode": "direct_call|durable_workflow|queue|pub_sub",
+    "reason": ""
+  },
+  "retry_idempotency_template": {
+    "operation": "",
+    "retry_owner": "workflow_controller",
+    "maximum_attempts": 3,
+    "retry_on": [],
+    "never_retry": [],
+    "idempotency_key_required": true,
+    "deduplication_store": "durable",
+    "after_exhaustion": ""
+  }
+}

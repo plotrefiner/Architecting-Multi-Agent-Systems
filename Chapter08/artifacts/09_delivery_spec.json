@@ -1,0 +1,31 @@
+{
+  "delivery_spec": "refund_support_delivery_v1",
+  "default_delivery_assumption": "at_least_once",
+  "coordination": {
+    "policy_only": "direct_call",
+    "customer_input_wait": "durable_workflow",
+    "delegated_evidence_work": "queue",
+    "independent_audit_and_notification": "pub_sub"
+  },
+  "contracts": {
+    "registry": "refund_message_contracts_v1",
+    "validate_on_publish": true,
+    "validate_on_consume": true,
+    "unknown_version": "quarantine",
+    "semantic_change": "new_major_version"
+  },
+  "reliability": {
+    "retry_owner": "workflow_controller",
+    "deduplication_store": "durable",
+    "action_idempotency_owner": "approved_action_service",
+    "publish_handoff": "transactional_outbox",
+    "dead_letter_owner": "refund_platform_operations",
+    "replay_requires_authorization": true
+  },
+  "authority_rules": [
+    "agent_events_are_proposals_or_artifact_facts",
+    "approval_events_do_not_directly_trigger_actions",
+    "controller_validates_state_before_transition",
+    "approved_action_service_reconciles_uncertain_effects"
+  ]
+}
