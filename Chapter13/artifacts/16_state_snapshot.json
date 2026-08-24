@@ -1,0 +1,24 @@
+{
+  "state_snapshot": {
+    "workflow_id": "refund_case_123",
+    "state_version": 7,
+    "current_node": "await_human_authority",
+    "accepted_artifacts": [
+      "policy_findings_pf_101",
+      "order_summary_order_202",
+      "chargeback_status_cb_303",
+      "rules_result_rr_404"
+    ],
+    "pending_nodes": [
+      "support_manager_review"
+    ],
+    "budgets": {
+      "model_calls_used": 3,
+      "tool_calls_used": 4,
+      "redrafts_used": 0,
+      "replans_used": 0
+    },
+    "human_review_status": "pending",
+    "terminal_status": null
+  }
+}

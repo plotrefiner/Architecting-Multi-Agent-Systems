@@ -1,0 +1,18 @@
+{
+  "dataset_metadata": {
+    "dataset_name": "refund_support_eval_set",
+    "dataset_version": "2026.08.01",
+    "case_count": 850,
+    "task_classes": [
+      "policy_only",
+      "missing_required_field",
+      "standard_refund",
+      "composite_refund_chargeback",
+      "human_approval_required",
+      "negative_authority_boundary"
+    ],
+    "policy_version": "refund_policy_v4",
+    "schema_version": "quality_eval_schema_v1",
+    "owner": "refund_ai_quality_team"
+  }
+}

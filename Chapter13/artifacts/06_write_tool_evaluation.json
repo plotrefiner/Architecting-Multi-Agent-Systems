@@ -1,0 +1,15 @@
+{
+  "tool_call_evaluation": {
+    "tool_call_id": "tool_901",
+    "caller": "approved_action_service",
+    "tool": "issue_refund",
+    "allowed": true,
+    "approval_present": true,
+    "approval_current": true,
+    "approval_scope_matches": true,
+    "idempotency_key_present": true,
+    "provider_outcome_reconciled": true,
+    "duplicate_effect_count": 0,
+    "result": "pass"
+  }
+}

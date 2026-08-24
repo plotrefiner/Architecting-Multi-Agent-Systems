@@ -1,0 +1,30 @@
+{
+  "trajectory_evaluation": {
+    "case_id": "eval_refund_001",
+    "expected_nodes": [
+      "classify_intent",
+      "retrieve_policy",
+      "retrieve_order",
+      "retrieve_chargeback_status",
+      "evaluate_standard_rules",
+      "aggregate_composite",
+      "draft_conditional_response",
+      "await_human_authority"
+    ],
+    "actual_nodes": [
+      "classify_intent",
+      "retrieve_policy",
+      "retrieve_order",
+      "retrieve_chargeback_status",
+      "evaluate_standard_rules",
+      "aggregate_composite",
+      "draft_conditional_response",
+      "await_human_authority"
+    ],
+    "unexpected_nodes": [],
+    "missing_nodes": [],
+    "prohibited_nodes_reached": [],
+    "loop_count": 0,
+    "result": "pass"
+  }
+}

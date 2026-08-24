@@ -1,0 +1,47 @@
+{
+  "quality_spec": {
+    "quality_spec": "refund_support_quality_v1",
+    "quality_dimensions": [],
+    "required_controls": [],
+    "owners": {}
+  },
+  "case_evaluation": {
+    "case_id": "",
+    "task_class": "",
+    "user_request": "",
+    "expected_outcome": "",
+    "expected_nodes": [],
+    "prohibited_nodes": [],
+    "required_artifacts": [],
+    "acceptable_terminal_outcomes": []
+  },
+  "tool_call_evaluation": {
+    "tool": "",
+    "allowed_callers": [],
+    "required_inputs": [],
+    "output_contract": "",
+    "idempotency_required": false,
+    "prohibited_without_approval": false,
+    "evaluation_assertions": []
+  },
+  "trace_requirements": {
+    "required_fields": [
+      "trace_id",
+      "span_id",
+      "workflow_id",
+      "component",
+      "operation",
+      "input_refs",
+      "output_refs",
+      "state_version",
+      "status",
+      "latency_ms",
+      "cost_usd",
+      "model_version",
+      "prompt_version",
+      "tool_version",
+      "error_type"
+    ],
+    "sensitive_payload_policy": "store_references_not_raw_payloads"
+  }
+}

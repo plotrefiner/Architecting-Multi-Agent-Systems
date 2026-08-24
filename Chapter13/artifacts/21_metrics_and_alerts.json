@@ -1,0 +1,56 @@
+{
+  "metrics": [
+    {
+      "metric": "human_handoff_rate",
+      "definition": "percentage_of_workflows_that_enter_human_review",
+      "dimensions": [
+        "task_class",
+        "risk_level",
+        "policy_version",
+        "workflow_graph_version"
+      ],
+      "alert_if": "rate_increases_by_more_than_30_percent_week_over_week"
+    },
+    {
+      "metric": "unsupported_claim_rate",
+      "definition": "share_of_customer_visible_claims_marked_unsupported_by_verifier_or_human_review",
+      "dimensions": [
+        "task_class",
+        "response_writer_prompt_version",
+        "model_version",
+        "policy_version"
+      ],
+      "alert_if": "rate_above_0.02_for_high_risk_tasks"
+    },
+    {
+      "metric": "chargeback_lookup_timeout_rate",
+      "definition": "percentage_of_chargeback_lookup_calls_that_timeout",
+      "dimensions": [
+        "tool_version",
+        "region",
+        "workflow_task_class"
+      ],
+      "alert_if": "timeout_rate_above_0.05_for_15_minutes"
+    }
+  ],
+  "alert": {
+    "alert_id": "alert_unsupported_claim_spike",
+    "metric": "unsupported_claim_rate",
+    "condition": "above_threshold",
+    "threshold": 0.02,
+    "task_class": "composite_refund_chargeback",
+    "suspected_owner": "response_writer_agent",
+    "include_dimensions": [
+      "prompt_version",
+      "model_version",
+      "policy_version",
+      "workflow_graph_version"
+    ],
+    "first_debugging_steps": [
+      "compare_traces_before_and_after_prompt_change",
+      "sample_failed_artifacts",
+      "run_regression_suite",
+      "check_verifier_rejection_reasons"
+    ]
+  }
+}

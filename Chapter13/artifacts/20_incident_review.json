@@ -1,0 +1,16 @@
+{
+  "incident_review": {
+    "incident_id": "inc_2026_08_14_003",
+    "severity": "high",
+    "first_detected_by": "human_correction",
+    "affected_workflows": 3,
+    "user_impact": "customer-facing language implied approval before human decision",
+    "immediate_mitigation": "disable auto-release for composite_chargeback cases",
+    "root_cause_ref": "rca_inc_2026_08_14_003",
+    "regression_tests_added": [
+      "regression_approval_implied_001"
+    ],
+    "owner": "refund_ai_quality_team",
+    "status": "resolved"
+  }
+}

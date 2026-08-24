@@ -1,0 +1,24 @@
+{
+  "trace_span": {
+    "trace_id": "trace_refund_123",
+    "span_id": "span_policy_001",
+    "parent_span_id": "span_route_001",
+    "workflow_id": "refund_case_123",
+    "component": "policy_retrieval_service",
+    "operation": "retrieve_policy",
+    "input_refs": [
+      "context:policy:ctx_701"
+    ],
+    "output_refs": [
+      "artifact:policy_findings_pf_101"
+    ],
+    "state_version": 4,
+    "status": "success",
+    "latency_ms": 840,
+    "cost_usd": 0.003,
+    "model_version": null,
+    "prompt_version": null,
+    "tool_version": "policy_search_v2",
+    "error_type": null
+  }
+}

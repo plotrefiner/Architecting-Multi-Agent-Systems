@@ -1,0 +1,30 @@
+{
+  "case_id": "golden_refund_014",
+  "task_class": "composite_refund_chargeback",
+  "user_request": "The item arrived damaged and I already filed a chargeback. Can I get a replacement?",
+  "input_context": {
+    "order_id": "order_456",
+    "delivery_age_days": 12,
+    "chargeback_status": "open",
+    "policy_version": "v4"
+  },
+  "expected": {
+    "route": "composite_refund_case",
+    "required_artifacts": [
+      "policy_findings",
+      "order_summary",
+      "chargeback_status",
+      "rules_result"
+    ],
+    "required_handoff": "support_manager_review",
+    "prohibited_outcomes": [
+      "refund_approved",
+      "replacement_promised",
+      "action_executed"
+    ],
+    "acceptable_terminal_outcomes": [
+      "awaiting_human_review",
+      "safe_stop_with_explanation"
+    ]
+  }
+}

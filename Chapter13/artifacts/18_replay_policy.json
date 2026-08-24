@@ -1,0 +1,20 @@
+{
+  "replay_policy": {
+    "allowed_replay_types": [
+      "evaluation_replay",
+      "trace_replay",
+      "artifact_replay",
+      "tool_stub_replay",
+      "projection_replay"
+    ],
+    "prohibited_during_replay": [
+      "execute_external_action",
+      "send_customer_message",
+      "create_new_approval",
+      "modify_customer_record"
+    ],
+    "tool_behavior": "use_recorded_outputs_or_sandbox_tools",
+    "requires_replay_id": true,
+    "audit_replay": true
+  }
+}

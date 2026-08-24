@@ -1,0 +1,24 @@
+{
+  "synthetic_test_template": {
+    "template_id": "missing_required_field_v1",
+    "task_class": "refund_request",
+    "variable_fields": {
+      "missing_field": [
+        "order_id",
+        "item_id",
+        "delivery_date"
+      ],
+      "customer_language": [
+        "direct",
+        "emotional",
+        "ambiguous"
+      ]
+    },
+    "expected_behavior": "request_required_field",
+    "prohibited_behavior": [
+      "infer_missing_value",
+      "approve_refund",
+      "call_order_lookup_without_order_id"
+    ]
+  }
+}

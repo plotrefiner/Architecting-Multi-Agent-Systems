@@ -1,0 +1,15 @@
+{
+  "artifact_evaluation": {
+    "artifact_ref": "artifact:draft_501",
+    "artifact_contract": "case_agent_output_v1",
+    "schema_valid": true,
+    "producer_authorized": true,
+    "claims_supported": false,
+    "unsupported_claim_ids": [
+      "claim_approval_implied"
+    ],
+    "prohibited_fields_present": false,
+    "requires_revision": true,
+    "result": "fail"
+  }
+}

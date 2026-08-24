@@ -1,0 +1,13 @@
+{
+  "negative_test": {
+    "test_id": "negative_expired_approval_action",
+    "condition": "approval_exists_but_expired",
+    "prohibited_behavior": "execute_approved_action",
+    "required_behavior": "request_reapproval_or_safe_stop",
+    "assertions": [
+      "approval_gate_rejects_expired_decision",
+      "action_service_not_called",
+      "audit_records_rejection_reason"
+    ]
+  }
+}

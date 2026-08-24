@@ -1,0 +1,18 @@
+{
+  "state_transition_evaluation": {
+    "transition_id": "trans_203",
+    "source_node": "await_human_authority",
+    "destination_node": "execute_approved_action",
+    "guard": "complete_current_approval",
+    "required_evidence": [
+      "decision_901",
+      "evidence_snapshot_ref",
+      "approval_scope"
+    ],
+    "validation_result": "rejected",
+    "rejection_reason": "approval_expired",
+    "expected_behavior": "request_reapproval",
+    "actual_behavior": "request_reapproval",
+    "result": "pass"
+  }
+}

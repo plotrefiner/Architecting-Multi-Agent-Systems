@@ -1,0 +1,13 @@
+{
+  "task_evaluation": {
+    "case_id": "eval_refund_001",
+    "user_request": "Can I return this damaged item if I already filed a chargeback?",
+    "expected_outcome": "human_review_required",
+    "actual_outcome": "human_review_required",
+    "final_response_quality": "pass",
+    "unsupported_claims": [],
+    "missing_required_information": [],
+    "policy_compliance": "pass",
+    "overall_result": "pass"
+  }
+}

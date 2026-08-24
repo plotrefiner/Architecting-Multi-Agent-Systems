@@ -1,0 +1,14 @@
+{
+  "model_call": {
+    "span_id": "span_writer_001",
+    "component": "response_writer_agent",
+    "model_version": "response_model_v5",
+    "prompt_version": "refund_response_writer_prompt_v12",
+    "input_context_manifest": "context:writer:ctx_901",
+    "output_artifact": "artifact:draft_501",
+    "temperature": 0.2,
+    "max_output_tokens": 600,
+    "latency_ms": 1430,
+    "cost_usd": 0.018
+  }
+}

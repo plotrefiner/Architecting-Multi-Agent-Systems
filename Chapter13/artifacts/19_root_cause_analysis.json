@@ -1,0 +1,25 @@
+{
+  "root_cause_analysis": {
+    "incident_id": "inc_2026_08_14_003",
+    "workflow_id": "refund_case_123",
+    "failure_type": "unsupported_customer_claim",
+    "observed_failure": "Final response implied replacement approval before human decision.",
+    "root_cause": "response_writer_agent received aggregation summary that did not clearly label recommendation as proposal_only.",
+    "contributing_factors": [
+      "context_projection_missing_authority_label",
+      "verifier_not_retained_for_this_task_class"
+    ],
+    "failed_controls": [
+      "claim_support_check"
+    ],
+    "controls_that_worked": [
+      "approved_action_service_not_called"
+    ],
+    "corrective_actions": [
+      "update_context_projection",
+      "add_regression_test",
+      "retain_verifier_for_composite_chargeback_cases"
+    ],
+    "severity": "high"
+  }
+}

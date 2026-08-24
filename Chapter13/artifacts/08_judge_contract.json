@@ -1,0 +1,22 @@
+{
+  "judge_contract": "refund_response_quality_judge_v1",
+  "inputs": [
+    "user_request",
+    "final_response",
+    "accepted_evidence_refs",
+    "expected_outcome"
+  ],
+  "criteria": [
+    "answers_user_question",
+    "does_not_overpromise",
+    "states_uncertainty",
+    "uses_professional_tone",
+    "does_not_expose_internal_information"
+  ],
+  "output_schema": {
+    "result": "pass|fail|uncertain",
+    "failed_criteria": "array",
+    "rationale": "string"
+  },
+  "may_change_workflow_state": false
+}

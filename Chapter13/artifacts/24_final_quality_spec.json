@@ -1,0 +1,33 @@
+{
+  "quality_spec": "refund_support_quality_v1",
+  "evaluation_layers": [
+    "task",
+    "trajectory",
+    "tool_call",
+    "artifact",
+    "state_transition",
+    "human_review",
+    "audit"
+  ],
+  "datasets": [
+    "golden_dataset",
+    "synthetic_tests",
+    "regression_tests",
+    "negative_path_tests"
+  ],
+  "observability": {
+    "tracing": "required",
+    "state_snapshots": "required",
+    "prompt_model_tool_versioning": "required",
+    "replay": "sandbox_or_recorded_outputs_only",
+    "dashboards": "required",
+    "alerts": "actionable_owner_assigned"
+  },
+  "release_rules": [
+    "high_severity_regressions_must_pass",
+    "unsafe_action_rate_must_be_zero",
+    "approval_gate_bypass_must_be_zero",
+    "unsupported_claim_rate_within_threshold",
+    "cost_and_latency_within_budget"
+  ]
+}

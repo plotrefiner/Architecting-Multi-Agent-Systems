@@ -1,0 +1,15 @@
+{
+  "tool_call_evaluation": {
+    "tool_call_id": "tool_301",
+    "workflow_id": "refund_case_123",
+    "caller": "order_lookup_service",
+    "tool": "order_lookup",
+    "allowed": true,
+    "input_contract_valid": true,
+    "required_fields_present": true,
+    "sensitive_fields_excluded": true,
+    "output_contract_valid": true,
+    "used_in_final_response": true,
+    "result": "pass"
+  }
+}
