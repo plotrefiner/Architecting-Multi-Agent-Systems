@@ -1,0 +1,39 @@
+{
+  "board_id": "refund_evidence_board_123",
+  "coverage_contract": "composite_refund_coverage_v1",
+  "accepted_entries": {
+    "applicable_policy": [
+      "eb_399"
+    ],
+    "order_and_item_identity": [
+      "eb_400"
+    ],
+    "item_condition_asserted": [
+      "eb_402"
+    ],
+    "chargeback_status": [
+      "eb_401"
+    ],
+    "standard_rules_result": [
+      "eb_403"
+    ]
+  },
+  "conflicts": [
+    {
+      "conflict_id": "conflict_51",
+      "type": "incompatible_financial_outcomes",
+      "evidence_refs": [
+        "eb_401",
+        "eb_403"
+      ],
+      "automatic_resolution": "not_permitted",
+      "required_authority": "support_manager"
+    }
+  ],
+  "coverage_status": "complete_with_authority_conflict",
+  "permitted_next_responsibility": "draft_response",
+  "prohibited_outcomes": [
+    "refund_approved",
+    "refund_executed"
+  ]
+}

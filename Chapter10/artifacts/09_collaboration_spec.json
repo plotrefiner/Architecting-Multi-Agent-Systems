@@ -1,0 +1,27 @@
+{
+  "collaboration_spec": "refund_support_collaboration_v1",
+  "selected_patterns": {
+    "shared_workspace": "typed_evidence_board_only",
+    "evidence_board": "composite_refund_path_only",
+    "generator_verifier": "conditional_on_measured_lift",
+    "runtime_debate": "not_selected",
+    "model_consensus_for_facts_or_authority": "prohibited",
+    "runtime_red_team": "not_selected_for_normal_refund_path",
+    "swarm": "not_selected"
+  },
+  "owners": {
+    "board_admission": "workflow_controller",
+    "workflow_state_and_stopping": "workflow_controller",
+    "human_decision": "human_approval_service",
+    "approved_effect": "approved_action_service"
+  },
+  "collaboration_rules": [
+    "typed_artifacts_not_hidden_conversation",
+    "task_scoped_views_not_universal_context",
+    "source_authority_not_agent_count",
+    "participants_cannot_accept_their_own_outputs",
+    "collaboration_outputs_are_evidence_or_proposals",
+    "all_rounds_share_durable_budgets",
+    "unresolved_is_a_valid_terminal_result"
+  ]
+}

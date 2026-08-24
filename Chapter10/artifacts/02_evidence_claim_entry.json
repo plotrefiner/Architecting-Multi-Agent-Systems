@@ -1,0 +1,24 @@
+{
+  "entry_id": "eb_401",
+  "entry_contract": "evidence_claim_v1",
+  "board_id": "refund_evidence_board_123",
+  "claim_id": "claim_chargeback_open",
+  "claim": "A chargeback for the order is currently open.",
+  "relationship": "supports",
+  "producer": "chargeback_lookup_service",
+  "artifact_ref": "artifact:chargeback_303",
+  "evidence_refs": [
+    "chargeback:cb_908:snapshot_17"
+  ],
+  "input_state_version": 5,
+  "validity": {
+    "observed_at": "2026-08-03T15:00:06Z",
+    "effective_until": "2026-08-03T15:05:06Z"
+  },
+  "uncertainty_codes": [],
+  "authority_scope": "chargeback_status_only",
+  "prohibited_inferences": [
+    "refund_rejected",
+    "refund_approved"
+  ]
+}

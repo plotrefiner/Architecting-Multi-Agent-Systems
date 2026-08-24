@@ -1,0 +1,26 @@
+{
+  "swarm_contract": "bounded_exploration_swarm_v1",
+  "eligible_purpose": "read_only_candidate_discovery",
+  "controller": "workflow_controller",
+  "maximum_participants": 4,
+  "maximum_tasks": 12,
+  "maximum_messages": 24,
+  "maximum_rounds": 2,
+  "deadline_seconds": 90,
+  "participant_permissions": [
+    "read_scoped_sources",
+    "propose_candidate"
+  ],
+  "prohibited_permissions": [
+    "write_external_state",
+    "approve",
+    "change_workflow_state",
+    "expand_context_scope",
+    "create_unregistered_worker"
+  ],
+  "dedupe_key": "normalized_candidate_and_source_hash",
+  "merge_rule": "validated_unique_candidates_only",
+  "progress_rule": "new_source_or_nonduplicate_candidate",
+  "on_budget_exhaustion": "return_partial_evidence",
+  "action_path": "none"
+}

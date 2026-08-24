@@ -1,0 +1,47 @@
+{
+  "collaboration_admission_test": {
+    "candidate_pattern": "blackboard|evidence_board|verifier|consensus|red_team|swarm",
+    "target_path": "",
+    "named_error_or_gap": "",
+    "simpler_baseline": "",
+    "independent_evidence_or_method_added": "",
+    "measured_retention_threshold": "",
+    "selected": false,
+    "reason": ""
+  },
+  "board_and_coverage": {
+    "board": {
+      "board_id": "",
+      "board_contract": "",
+      "workflow_id": "",
+      "purpose": "",
+      "admission_owner": "workflow_controller",
+      "allowed_producers": [],
+      "allowed_entry_contracts": [],
+      "write_mode": "append_immutable_reference",
+      "participant_may_accept_own_entry": false,
+      "participant_may_change_workflow_state": false,
+      "terminal_statuses": []
+    },
+    "coverage": {
+      "coverage_contract": "",
+      "required_claims": [
+        {
+          "claim_type": "",
+          "authoritative_evidence": "",
+          "if_unresolved": ""
+        }
+      ],
+      "optional_claims": [],
+      "conflict_behavior": "",
+      "authority_required_for": []
+    }
+  },
+  "swarm_decision": {
+    "pattern": "swarm",
+    "selected": false,
+    "reason": "Known workflow with strict evidence, privacy, state, and authority boundaries.",
+    "simpler_design": "pipeline_graph_join_and_controller_owned_stop",
+    "future_candidate_use": "read_only_candidate_discovery"
+  }
+}

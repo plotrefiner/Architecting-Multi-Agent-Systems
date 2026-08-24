@@ -1,0 +1,14 @@
+{
+  "confidence_record_id": "confidence_71",
+  "claim_id": "document_clause_classification_18",
+  "score": 0.81,
+  "score_meaning": "empirical_precision_estimate",
+  "calibration_ref": "calibration:clause_risk:v3",
+  "task_class": "supplier_contract_clause_risk",
+  "calibration_sample_size": 1840,
+  "evidence_coverage": 1.0,
+  "independent_evidence_sets": 2,
+  "model_version": "classifier_family_b_v5",
+  "permitted_use": "prioritize_review_only",
+  "prohibited_use": "approve_contract_or_skip_required_review"
+}

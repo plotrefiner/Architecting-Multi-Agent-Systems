@@ -1,0 +1,16 @@
+{
+  "challenge_id": "challenge_81",
+  "contract": "bounded_counterexample_v1",
+  "target_ref": "artifact:draft_501",
+  "target_claim_id": "draft_claim_refund_available",
+  "failure_hypothesis": "refund_language_ignores_open_chargeback",
+  "counterexample_evidence_refs": [
+    "chargeback:cb_908:snapshot_17",
+    "policy:v4:section5.1"
+  ],
+  "result": "counterexample_supported",
+  "recommended_next_step": "remove_assurance_and_request_human_review",
+  "may_rewrite": false,
+  "may_approve": false,
+  "maximum_follow_up_rounds": 0
+}

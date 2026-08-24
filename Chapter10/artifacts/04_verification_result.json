@@ -1,0 +1,30 @@
+{
+  "verification_id": "verify_601",
+  "contract": "verification_result_v1",
+  "producer": "verifier_agent_if_justified",
+  "workflow_id": "refund_case_123",
+  "input_state_version": 6,
+  "draft_ref": "artifact:draft_501",
+  "checks": [
+    {
+      "claim_id": "draft_claim_1",
+      "status": "supported",
+      "evidence_refs": [
+        "policy:v4:section3.2"
+      ]
+    },
+    {
+      "claim_id": "draft_claim_2",
+      "status": "unsupported",
+      "evidence_refs": [],
+      "reason_code": "approval_implied_without_decision"
+    }
+  ],
+  "overall_status": "revision_required",
+  "unsupported_claim_ids": [
+    "draft_claim_2"
+  ],
+  "may_rewrite": false,
+  "may_approve": false,
+  "may_select_transition": false
+}

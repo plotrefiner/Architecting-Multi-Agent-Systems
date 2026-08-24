@@ -1,0 +1,15 @@
+{
+  "protocol_id": "bounded_consensus_v1",
+  "eligible_task_class": "uncertain_non_authoritative_classification",
+  "participant_count": 3,
+  "participant_contract": "independent_classification_v1",
+  "initial_responses_hidden_from_peers": true,
+  "maximum_rounds": 1,
+  "aggregation_rule": "weighted_vote_with_abstention",
+  "weight_source": "precomputed_calibration_by_task_class",
+  "minimum_independent_evidence_sets": 2,
+  "tie_outcome": "unresolved",
+  "may_create_authority": false,
+  "may_trigger_external_action": false,
+  "failure_destination": "human_or_safe_stop"
+}
