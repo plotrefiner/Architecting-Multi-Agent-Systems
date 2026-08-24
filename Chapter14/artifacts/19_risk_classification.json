@@ -1,0 +1,21 @@
+{
+  "risk_classification": {
+    "workflow": "refund_support",
+    "risk_level": "medium_high",
+    "risk_factors": [
+      "uses_customer_data",
+      "may_prepare_financial_exception",
+      "may_trigger_customer_visible_response",
+      "may_execute_action_after_approval"
+    ],
+    "required_controls": [
+      "pii_redaction",
+      "tool_permission_enforcement",
+      "human_approval_for_exceptions",
+      "idempotency_for_actions",
+      "audit_trail",
+      "regression_tests",
+      "production_monitoring"
+    ]
+  }
+}

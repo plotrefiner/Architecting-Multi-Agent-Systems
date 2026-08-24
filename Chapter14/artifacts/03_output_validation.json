@@ -1,0 +1,16 @@
+{
+  "output_validation": {
+    "artifact_ref": "artifact:draft_response_502",
+    "artifact_contract": "customer_response_v1",
+    "schema_valid": true,
+    "claims_supported": false,
+    "unsupported_claim_ids": [
+      "claim_replacement_approved"
+    ],
+    "contains_pii": false,
+    "contains_internal_information": false,
+    "implies_unapproved_action": true,
+    "requires_human_review": true,
+    "validation_result": "rejected"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "approval_artifact": {
+    "approval_id": "approval_456",
+    "workflow_id": "refund_case_123",
+    "reviewer_role": "support_manager",
+    "reviewer_id": "manager_42",
+    "decision_type": "approve_replacement_exception",
+    "approved_action": "offer_replacement",
+    "scope": {
+      "order_id": "order_456",
+      "item_id": "item_1",
+      "maximum_value": 129.99,
+      "currency": "USD"
+    },
+    "evidence_snapshot_ref": "evidence_snapshot:refund_case_123:v7",
+    "reviewed_state_version": 7,
+    "expires_at": "2026-08-03T16:00:00Z",
+    "reason_code": "customer_retention_exception",
+    "audit_required": true
+  }
+}

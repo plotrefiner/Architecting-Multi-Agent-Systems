@@ -1,0 +1,13 @@
+{
+  "retrieved_evidence": {
+    "evidence_id": "ev_301",
+    "source_id": "refund_policy_v4",
+    "source_type": "approved_policy_document",
+    "trust_level": "approved_internal_source",
+    "retrieved_for": "policy_agent",
+    "content_ref": "chunk:refund_policy_v4_section_3_2",
+    "contains_instructional_language": false,
+    "allowed_use": "support_policy_claims",
+    "prohibited_use": "grant_approval_or_execute_action"
+  }
+}

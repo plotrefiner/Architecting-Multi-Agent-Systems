@@ -1,0 +1,11 @@
+{
+  "approval_gate_result": {
+    "workflow_id": "refund_case_123",
+    "action_command_id": "cmd_1002",
+    "approval_id": "approval_456",
+    "gate": "replacement_exception_approval_gate_v1",
+    "result": "rejected",
+    "reason": "approval_expired",
+    "next_step": "request_reapproval_or_safe_stop"
+  }
+}

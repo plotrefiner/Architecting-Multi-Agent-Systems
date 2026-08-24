@@ -1,0 +1,15 @@
+{
+  "governance_owners": {
+    "system": "refund_support_agentic_workflow",
+    "product_owner": "customer_support_product",
+    "technical_owner": "refund_ai_platform_team",
+    "model_owner": "ai_model_governance_team",
+    "data_owner": "customer_data_platform",
+    "security_owner": "application_security_team",
+    "privacy_owner": "privacy_review_team",
+    "policy_owner": "refund_policy_operations",
+    "human_review_owner": "support_operations",
+    "compliance_owner": "compliance_review_team",
+    "incident_owner": "ai_quality_and_operations"
+  }
+}

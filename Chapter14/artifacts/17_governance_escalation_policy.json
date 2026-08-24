@@ -1,0 +1,11 @@
+{
+  "governance_escalation_policy": {
+    "policy_conflict": "policy_owner_review",
+    "financial_exception": "support_manager_review",
+    "prompt_injection_detected": "security_review",
+    "pii_exposure_detected": "privacy_incident_review",
+    "tool_outage": "operations_review",
+    "model_quality_incident": "ai_quality_review",
+    "audit_failure": "compliance_review"
+  }
+}

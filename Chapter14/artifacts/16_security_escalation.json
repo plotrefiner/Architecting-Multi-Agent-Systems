@@ -1,0 +1,17 @@
+{
+  "security_escalation": {
+    "escalation_id": "sec_801",
+    "workflow_id": "refund_case_123",
+    "trigger": "suspected_prompt_injection",
+    "detected_in": "uploaded_document",
+    "affected_component": "policy_agent",
+    "blocked": true,
+    "evidence_refs": [
+      "document:uploaded_777:chunk_4"
+    ],
+    "risk_level": "medium",
+    "recommended_owner": "security_review_queue",
+    "customer_impact": "none",
+    "next_step": "review_and_confirm_detection"
+  }
+}

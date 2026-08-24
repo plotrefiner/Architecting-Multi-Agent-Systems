@@ -1,0 +1,27 @@
+{
+  "governance_policy": {
+    "policy_id": "refund_support_security_policy_v1",
+    "rules": [
+      {
+        "rule": "agents_may_not_execute_refunds",
+        "enforced_by": "tool_gateway",
+        "severity": "critical"
+      },
+      {
+        "rule": "refund_exception_requires_support_manager_approval",
+        "enforced_by": "approval_gate",
+        "severity": "critical"
+      },
+      {
+        "rule": "customer_payment_data_excluded_from_model_context",
+        "enforced_by": "context_builder",
+        "severity": "high"
+      },
+      {
+        "rule": "prompt_injection_detection_routes_to_security_review",
+        "enforced_by": "input_validator",
+        "severity": "medium"
+      }
+    ]
+  }
+}

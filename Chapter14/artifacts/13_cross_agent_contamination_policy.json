@@ -1,0 +1,33 @@
+{
+  "cross_agent_contamination_policy": {
+    "response_writer_agent": {
+      "may_receive": [
+        "user_request",
+        "accepted_policy_findings",
+        "customer_context_summary",
+        "approved_tone_preference",
+        "limitations"
+      ],
+      "must_not_receive": [
+        "verifier_hidden_rubric",
+        "private_reviewer_notes",
+        "internal_risk_score",
+        "payment_details"
+      ]
+    },
+    "verifier_agent": {
+      "may_receive": [
+        "draft_response",
+        "claims_to_verify",
+        "accepted_evidence",
+        "verification_rubric"
+      ],
+      "must_not_receive": [
+        "generator_hidden_reasoning",
+        "customer_tone_preference",
+        "approval_interface",
+        "action_tools"
+      ]
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "validation_failure_policy": [
+    {
+      "failure_type": "missing_required_field",
+      "outcome": "request_clarification",
+      "retry": false
+    },
+    {
+      "failure_type": "unsupported_claim",
+      "outcome": "bounded_redraft_or_human_review",
+      "retry": "only_with_new_evidence_or_claim_ids"
+    },
+    {
+      "failure_type": "approval_expired",
+      "outcome": "request_reapproval",
+      "retry": false
+    },
+    {
+      "failure_type": "pii_exposure_detected",
+      "outcome": "block_release_and_record_incident",
+      "retry": false
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "memory_write_request": {
+    "memory_type": "customer_preference",
+    "source": "explicit_customer_statement",
+    "producer": "response_writer_agent",
+    "content": "Customer prefers concise updates.",
+    "evidence_ref": "message:customer_2026_08_03",
+    "confidence": "medium",
+    "sensitivity": "low",
+    "expires_at": null,
+    "allowed_consumers": [
+      "response_writer_agent"
+    ],
+    "requires_review": false
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "memory_admission_policy": {
+    "allowed_without_review": [
+      {
+        "memory_type": "user_communication_preference",
+        "allowed_sources": [
+          "explicit_user_statement"
+        ],
+        "allowed_consumers": [
+          "response_writer_agent"
+        ]
+      }
+    ],
+    "requires_review": [
+      {
+        "memory_type": "policy_rule",
+        "required_reviewer": "policy_owner"
+      }
+    ],
+    "always_reject": [
+      {
+        "memory_type": "tool_permission_change"
+      },
+      {
+        "memory_type": "approval_grant"
+      },
+      {
+        "memory_type": "authority_override"
+      }
+    ]
+  }
+}

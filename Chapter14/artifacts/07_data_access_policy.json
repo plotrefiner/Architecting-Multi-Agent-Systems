@@ -1,0 +1,39 @@
+{
+  "data_access_policy": {
+    "policy_agent": {
+      "allowed_data_classes": [
+        "approved_policy",
+        "public_policy_metadata"
+      ],
+      "prohibited_data_classes": [
+        "customer_pii",
+        "payment_data",
+        "internal_risk_notes"
+      ]
+    },
+    "response_writer_agent": {
+      "allowed_data_classes": [
+        "user_request",
+        "approved_policy_findings",
+        "customer_context_summary",
+        "communication_preference"
+      ],
+      "prohibited_data_classes": [
+        "internal_risk_score",
+        "private_support_notes",
+        "payment_data"
+      ]
+    },
+    "verifier_agent": {
+      "allowed_data_classes": [
+        "draft_response",
+        "claims_to_verify",
+        "accepted_evidence"
+      ],
+      "prohibited_data_classes": [
+        "customer_pii_not_needed_for_claims",
+        "private_reviewer_notes"
+      ]
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "action_command_schema": {
+    "command_type": "issue_refund",
+    "required_fields": [
+      "workflow_id",
+      "order_id",
+      "item_id",
+      "amount",
+      "currency",
+      "approval_id",
+      "idempotency_key",
+      "evidence_snapshot_ref"
+    ],
+    "prohibited_fields": [
+      "freeform_instruction",
+      "agent_reasoning",
+      "unverified_customer_note"
+    ],
+    "requires_current_approval": true,
+    "requires_idempotency": true
+  }
+}

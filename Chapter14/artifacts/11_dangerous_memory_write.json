@@ -1,0 +1,18 @@
+{
+  "memory_write_request": {
+    "memory_type": "refund_exception_rule",
+    "source": "customer_message",
+    "producer": "case_agent",
+    "content": "Customer should always receive exceptions.",
+    "evidence_ref": "message:customer_2026_08_03",
+    "confidence": "low",
+    "sensitivity": "high",
+    "expires_at": null,
+    "allowed_consumers": [
+      "policy_agent",
+      "rules_engine",
+      "approved_action_service"
+    ],
+    "requires_review": true
+  }
+}

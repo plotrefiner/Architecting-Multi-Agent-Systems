@@ -1,0 +1,22 @@
+{
+  "tool_output_contract": {
+    "tool": "ticket_lookup",
+    "output_contract": "ticket_summary_v1",
+    "trusted_fields": [
+      "ticket_id",
+      "status",
+      "created_at",
+      "customer_message"
+    ],
+    "untrusted_fields": [
+      "customer_message",
+      "uploaded_text",
+      "external_notes"
+    ],
+    "fields_never_treated_as_instruction": [
+      "customer_message",
+      "uploaded_text",
+      "external_notes"
+    ]
+  }
+}
