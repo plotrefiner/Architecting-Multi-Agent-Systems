@@ -1,0 +1,16 @@
+{
+  "input_validation": {
+    "workflow_id": "refund_case_123",
+    "input_ref": "request:req_789",
+    "supported_request": true,
+    "detected_intent": "refund_support",
+    "required_fields_present": false,
+    "missing_fields": [
+      "order_id"
+    ],
+    "contains_prompt_injection_attempt": false,
+    "contains_sensitive_data": false,
+    "prohibited_action_requested": false,
+    "next_step": "request_required_field"
+  }
+}
