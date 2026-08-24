@@ -1,0 +1,32 @@
+{
+  "board_id": "refund_evidence_board_123",
+  "board_contract": "refund_evidence_board_v1",
+  "workflow_id": "refund_case_123",
+  "input_state_version": 5,
+  "purpose": "composite_refund_evidence_reconciliation",
+  "admission_owner": "workflow_controller",
+  "state_transition_owner": "workflow_controller",
+  "evidence_scope": "composite_refund_case",
+  "allowed_producers": [
+    "policy_retrieval_service",
+    "order_lookup_service",
+    "chargeback_lookup_service",
+    "refund_rules_engine",
+    "case_agent",
+    "verifier_agent_if_justified"
+  ],
+  "allowed_entry_contracts": [
+    "evidence_claim_v1",
+    "draft_claim_v1",
+    "verification_result_v1"
+  ],
+  "write_mode": "append_immutable_reference",
+  "participant_may_accept_own_entry": false,
+  "participant_may_change_workflow_state": false,
+  "deadline_ref": "workflow_deadline",
+  "terminal_statuses": [
+    "resolved",
+    "insufficient_evidence",
+    "expired"
+  ]
+}
