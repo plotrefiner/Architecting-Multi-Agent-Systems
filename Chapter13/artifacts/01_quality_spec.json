@@ -1,0 +1,22 @@
+{
+  "quality_spec": "refund_support_quality_v1",
+  "quality_dimensions": [
+    "route_correctness",
+    "evidence_coverage",
+    "claim_support",
+    "tool_call_correctness",
+    "approval_gate_correctness",
+    "safe_stopping",
+    "final_response_quality",
+    "cost_and_latency",
+    "audit_completeness"
+  ],
+  "required_controls": [
+    "evaluate_task",
+    "evaluate_trajectory",
+    "evaluate_tool_calls",
+    "evaluate_state_transitions",
+    "evaluate_human_handoffs",
+    "monitor_production_drift"
+  ]
+}
