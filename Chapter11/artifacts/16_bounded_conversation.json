@@ -1,0 +1,19 @@
+{
+  "bounded_conversation": {
+    "conversation_type": "planner_supervisor_clarification",
+    "allowed_participants": [
+      "case_planner",
+      "case_supervisor"
+    ],
+    "maximum_turns": 2,
+    "required_output": "validated_plan_or_unresolved",
+    "progress_rule": "must_add_new_registered_task_or_identify_blocker",
+    "prohibited": [
+      "call_action_tools",
+      "request_customer_contact",
+      "approve_exception",
+      "create_new_agent"
+    ],
+    "on_no_progress": "safe_stop"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "plan_execution": {
+    "plan_id": "plan_001",
+    "validation_status": "accepted",
+    "execution_owner": "workflow_controller",
+    "task_conversion": [
+      {
+        "task_id": "task_policy",
+        "converted_to": "delegation_command",
+        "command_type": "retrieve_policy"
+      },
+      {
+        "task_id": "task_order",
+        "converted_to": "delegation_command",
+        "command_type": "retrieve_order"
+      },
+      {
+        "task_id": "task_chargeback",
+        "converted_to": "delegation_command",
+        "command_type": "retrieve_chargeback_status"
+      }
+    ],
+    "state_transition_owner": "workflow_controller"
+  }
+}

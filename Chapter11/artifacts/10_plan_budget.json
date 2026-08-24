@@ -1,0 +1,13 @@
+{
+  "plan_budget": {
+    "workflow_id": "refund_case_123",
+    "maximum_tasks": 6,
+    "maximum_model_calls": 4,
+    "maximum_tool_calls": 5,
+    "maximum_redrafts": 1,
+    "maximum_replanning_events": 1,
+    "maximum_wall_clock_seconds": 120,
+    "maximum_estimated_cost_usd": 0.25,
+    "on_budget_exhaustion": "safe_stop_or_human_escalation"
+  }
+}

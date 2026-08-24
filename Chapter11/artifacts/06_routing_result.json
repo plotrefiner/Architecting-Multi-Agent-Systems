@@ -1,0 +1,19 @@
+{
+  "routing_result": {
+    "workflow_id": "refund_case_123",
+    "router": "intent_router",
+    "input_state_version": 2,
+    "selected_route": "composite_refund_case",
+    "confidence": 0.84,
+    "required_fields_missing": [],
+    "reason_codes": [
+      "damage_reported",
+      "chargeback_mentioned",
+      "replacement_requested"
+    ],
+    "recommended_next_component": "case_planner",
+    "prohibited_next_components": [
+      "approved_action_service"
+    ]
+  }
+}

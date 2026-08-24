@@ -1,0 +1,27 @@
+{
+  "candidate_plans": [
+    {
+      "plan_id": "plan_simple_policy",
+      "estimated_cost_usd": 0.02,
+      "estimated_latency_seconds": 3,
+      "risk_level": "low",
+      "meets_requirements": true
+    },
+    {
+      "plan_id": "plan_full_composite_review",
+      "estimated_cost_usd": 0.18,
+      "estimated_latency_seconds": 45,
+      "risk_level": "medium",
+      "meets_requirements": true
+    },
+    {
+      "plan_id": "plan_multi_agent_debate",
+      "estimated_cost_usd": 0.72,
+      "estimated_latency_seconds": 180,
+      "risk_level": "medium",
+      "meets_requirements": false,
+      "rejection_reason": "unnecessary_for_authoritative_facts"
+    }
+  ],
+  "selected_plan": "plan_full_composite_review"
+}

@@ -1,0 +1,18 @@
+{
+  "replanning_policy": {
+    "maximum_replans": 1,
+    "allowed_triggers": [
+      "required_artifact_unavailable",
+      "user_clarification_received",
+      "human_decision_modified_action",
+      "evidence_conflict_detected"
+    ],
+    "prohibited_triggers": [
+      "planner_low_confidence_without_new_evidence",
+      "desire_to_improve_answer",
+      "tool_permission_denied",
+      "budget_exhausted"
+    ],
+    "on_replan_exhaustion": "safe_stop_or_human_escalation"
+  }
+}

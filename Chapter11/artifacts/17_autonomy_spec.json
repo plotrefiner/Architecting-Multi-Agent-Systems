@@ -1,0 +1,22 @@
+{
+  "autonomy_spec": "refund_support_autonomy_v1",
+  "selected_planning_modes": {
+    "policy_only": "no_planner",
+    "missing_required_field": "controller_owned_field_request",
+    "composite_refund_case": "bounded_plan_first"
+  },
+  "planning_rules": [
+    "planner_outputs_are_proposals",
+    "controller_validates_every_task",
+    "only_registered_responsibilities_may_be_planned",
+    "workers_may_not_create_unregistered_tasks",
+    "replanning_requires_new_evidence_or_valid_failure"
+  ],
+  "autonomy_rules": [
+    "planning_does_not_grant_permission",
+    "tool_use_requires_role_permission",
+    "human_authority_required_for_exceptions",
+    "approved_action_requires_complete_current_command",
+    "safe_stop_is_valid_terminal_outcome"
+  ]
+}

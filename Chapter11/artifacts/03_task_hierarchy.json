@@ -1,0 +1,41 @@
+{
+  "goal": "handle_composite_refund_request",
+  "phases": [
+    {
+      "phase": "understand_request",
+      "tasks": [
+        "classify_intent",
+        "extract_required_fields"
+      ]
+    },
+    {
+      "phase": "collect_evidence",
+      "tasks": [
+        "retrieve_policy",
+        "retrieve_order",
+        "retrieve_chargeback_status"
+      ]
+    },
+    {
+      "phase": "evaluate_options",
+      "tasks": [
+        "evaluate_standard_rules",
+        "identify_authority_conflicts"
+      ]
+    },
+    {
+      "phase": "communicate",
+      "tasks": [
+        "draft_conditional_response",
+        "verify_supported_claims"
+      ]
+    },
+    {
+      "phase": "resolve_authority",
+      "tasks": [
+        "request_human_approval",
+        "execute_approved_action"
+      ]
+    }
+  ]
+}

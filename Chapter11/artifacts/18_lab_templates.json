@@ -1,0 +1,55 @@
+{
+  "planning_decision": {
+    "workflow_path": "",
+    "deterministic_path_available": true,
+    "planning_needed": false,
+    "reason": "",
+    "simpler_baseline": "",
+    "planner_invocation_condition": ""
+  },
+  "plan_decomposition_budget": {
+    "plan": {
+      "plan_id": "",
+      "workflow_id": "",
+      "planner": "",
+      "planning_purpose": "",
+      "input_state_version": 1,
+      "status": "proposed",
+      "tasks": [],
+      "prohibited_tasks": [],
+      "budget": {}
+    },
+    "decomposition_policy": {
+      "maximum_depth": 1,
+      "maximum_total_tasks": 6,
+      "allowed_responsibilities": [],
+      "workers_may_create_tasks": false,
+      "planner_may_create_unregistered_responsibilities": false,
+      "on_budget_exhaustion": "safe_stop"
+    },
+    "plan_budget": {
+      "maximum_tasks": 6,
+      "maximum_model_calls": 4,
+      "maximum_tool_calls": 5,
+      "maximum_redrafts": 1,
+      "maximum_replanning_events": 1,
+      "maximum_wall_clock_seconds": 120,
+      "maximum_estimated_cost_usd": 0.25,
+      "on_budget_exhaustion": "safe_stop_or_human_escalation"
+    }
+  },
+  "routing_stopping": {
+    "routing_policy": {
+      "intent_routing": {},
+      "model_routing": {},
+      "tool_routing": {},
+      "escalation_routing": {}
+    },
+    "stopping_policy": {
+      "terminal_outcomes": [],
+      "stop_conditions": [],
+      "safe_stop_message_policy": "",
+      "human_escalation_policy": ""
+    }
+  }
+}

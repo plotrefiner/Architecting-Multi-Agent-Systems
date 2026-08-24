@@ -1,0 +1,26 @@
+{
+  "replanning_request": {
+    "workflow_id": "refund_case_123",
+    "previous_plan_id": "plan_001",
+    "trigger": "chargeback_status_unavailable",
+    "current_state_version": 7,
+    "accepted_artifacts": [
+      "policy_findings_pf_101",
+      "order_summary_order_202"
+    ],
+    "unavailable_artifacts": [
+      "chargeback_status"
+    ],
+    "allowed_changes": [
+      "request_human_review",
+      "draft_partial_response",
+      "pause_until_chargeback_status_available",
+      "safe_stop"
+    ],
+    "prohibited_changes": [
+      "approve_refund",
+      "infer_chargeback_status",
+      "execute_replacement"
+    ]
+  }
+}

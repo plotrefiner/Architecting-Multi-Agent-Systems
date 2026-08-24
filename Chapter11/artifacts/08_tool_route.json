@@ -1,0 +1,16 @@
+{
+  "tool_route": {
+    "task_id": "task_chargeback_status",
+    "selected_tool": "chargeback_lookup",
+    "responsibility": "retrieve_chargeback_status",
+    "selection_reason": "chargeback_status_required_for_composite_refund_case",
+    "required_permission": "restricted_read",
+    "input_contract": "chargeback_lookup_request_v1",
+    "output_contract": "chargeback_status_v1",
+    "idempotency_required": false,
+    "prohibited_tools": [
+      "issue_refund",
+      "send_customer_message"
+    ]
+  }
+}

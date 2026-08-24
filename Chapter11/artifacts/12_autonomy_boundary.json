@@ -1,0 +1,28 @@
+{
+  "autonomy_boundary": {
+    "workflow": "refund_support",
+    "allowed_without_human_approval": [
+      "classify_intent",
+      "retrieve_policy",
+      "retrieve_order",
+      "retrieve_chargeback_status",
+      "evaluate_standard_rules",
+      "draft_conditional_response",
+      "verify_supported_claims",
+      "request_required_fields",
+      "prepare_escalation_packet"
+    ],
+    "requires_human_approval": [
+      "approve_policy_exception",
+      "issue_refund",
+      "promise_replacement",
+      "override_standard_rules"
+    ],
+    "always_prohibited": [
+      "create_unregistered_worker",
+      "expand_tool_permissions",
+      "execute_action_from_agent_plan",
+      "ignore_authority_boundary"
+    ]
+  }
+}

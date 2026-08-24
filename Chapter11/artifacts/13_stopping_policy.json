@@ -1,0 +1,39 @@
+{
+  "stopping_policy": {
+    "terminal_outcomes": [
+      "completed",
+      "awaiting_user_input",
+      "awaiting_human_review",
+      "safe_stop",
+      "unsupported_request",
+      "budget_exhausted",
+      "deadline_expired"
+    ],
+    "stop_conditions": [
+      {
+        "condition": "final_response_released",
+        "outcome": "completed"
+      },
+      {
+        "condition": "required_field_missing",
+        "outcome": "awaiting_user_input"
+      },
+      {
+        "condition": "human_authority_required",
+        "outcome": "awaiting_human_review"
+      },
+      {
+        "condition": "retry_budget_exhausted",
+        "outcome": "budget_exhausted"
+      },
+      {
+        "condition": "no_registered_responsibility",
+        "outcome": "unsupported_request"
+      },
+      {
+        "condition": "continuation_requires_prohibited_action",
+        "outcome": "safe_stop"
+      }
+    ]
+  }
+}

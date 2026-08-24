@@ -1,0 +1,22 @@
+{
+  "escalation_route": {
+    "workflow_id": "refund_case_123",
+    "reason_codes": [
+      "chargeback_status_unavailable",
+      "financial_authority_required"
+    ],
+    "requested_authority": "support_manager_review",
+    "accepted_artifacts": [
+      "policy_findings_pf_101",
+      "order_summary_order_202"
+    ],
+    "missing_artifacts": [
+      "chargeback_status"
+    ],
+    "prohibited_actions_until_resolved": [
+      "issue_refund",
+      "promise_replacement"
+    ],
+    "recommended_next_step": "human_review"
+  }
+}

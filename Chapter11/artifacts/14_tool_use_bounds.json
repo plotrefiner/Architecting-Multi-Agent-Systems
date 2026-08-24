@@ -1,0 +1,28 @@
+{
+  "tool_use_bounds": {
+    "policy_search": {
+      "allowed_for": [
+        "policy_retrieval_service"
+      ],
+      "maximum_calls_per_workflow": 2,
+      "requires_context_scope": "approved_policy_corpus"
+    },
+    "order_lookup": {
+      "allowed_for": [
+        "order_lookup_service"
+      ],
+      "maximum_calls_per_workflow": 2,
+      "requires_fields": [
+        "order_id"
+      ]
+    },
+    "issue_refund": {
+      "allowed_for": [
+        "approved_action_service"
+      ],
+      "requires_human_approval": true,
+      "requires_idempotency_key": true,
+      "maximum_calls_per_approved_command": 1
+    }
+  }
+}

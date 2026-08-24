@@ -1,0 +1,21 @@
+{
+  "task_id": "task_chargeback_status",
+  "parent_plan_id": "plan_001",
+  "phase": "collect_evidence",
+  "responsibility": "retrieve_chargeback_status",
+  "assigned_owner": "chargeback_lookup_service",
+  "input_contract": "chargeback_lookup_request_v1",
+  "output_contract": "chargeback_status_v1",
+  "required_inputs": [
+    "order_id",
+    "customer_id"
+  ],
+  "context_projection_ref": "chargeback_lookup_context_v1",
+  "maximum_attempts": 2,
+  "deadline_seconds": 20,
+  "may_decompose_further": false,
+  "may_call_tools": [
+    "chargeback_lookup"
+  ],
+  "may_trigger_external_action": false
+}

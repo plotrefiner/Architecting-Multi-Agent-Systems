@@ -1,0 +1,23 @@
+{
+  "model_routing_policy": {
+    "intent_classification": {
+      "default": "small_classifier",
+      "fallback": "larger_reasoning_model",
+      "fallback_condition": "classifier_confidence_below_threshold"
+    },
+    "policy_retrieval_summary": {
+      "default": "structured_output_model",
+      "requires_citations": true,
+      "maximum_context_tokens": 8000
+    },
+    "customer_response_drafting": {
+      "default": "medium_language_model",
+      "upgrade_condition": "high_complexity_or_sensitive_case",
+      "downgrade_condition": "template_sufficient"
+    },
+    "claim_verification": {
+      "default": "verifier_model",
+      "retention_condition": "measured_lift_above_threshold"
+    }
+  }
+}
