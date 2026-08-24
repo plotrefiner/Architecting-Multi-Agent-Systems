@@ -1,0 +1,11 @@
+{
+  "feedback_classification": {
+    "feedback_id": "fb_701",
+    "classification": "business_exception",
+    "system_error": false,
+    "should_update_prompt": false,
+    "should_update_policy": false,
+    "should_add_eval_case": true,
+    "notes": "System followed standard policy, but manager approved an exception."
+  }
+}

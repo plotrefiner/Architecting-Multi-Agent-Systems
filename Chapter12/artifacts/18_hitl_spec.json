@@ -1,0 +1,37 @@
+{
+  "hitl_spec": "refund_support_hitl_v1",
+  "human_roles": [
+    "customer",
+    "support_agent",
+    "support_manager",
+    "policy_owner",
+    "operations_owner",
+    "compliance_reviewer"
+  ],
+  "oversight_rules": [
+    "human_roles_have_scoped_authority",
+    "review_packets_replace_raw_transcripts",
+    "approval_is_structured_and_expiring",
+    "human_decisions_do_not_execute_actions_directly",
+    "corrections_are_classified_before_learning",
+    "audit_trails_reconstruct_workflow_outcomes"
+  ],
+  "mandatory_handoff_conditions": [
+    "required_evidence_missing",
+    "unsupported_customer_claim",
+    "policy_conflict",
+    "financial_exception",
+    "human_authority_required",
+    "approval_scope_mismatch",
+    "high_stakes_action"
+  ],
+  "required_tests": [
+    "agent_cannot_approve_exception",
+    "approval_expiry_blocks_action",
+    "scope_mismatch_blocks_action",
+    "review_packet_excludes_private_scratchpads",
+    "override_requires_reason_code",
+    "business_exception_not_labeled_system_error",
+    "audit_trail_links_evidence_decision_and_action"
+  ]
+}

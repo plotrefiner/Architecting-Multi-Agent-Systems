@@ -1,0 +1,28 @@
+{
+  "review_packet_id": "review_501",
+  "workflow_id": "refund_case_123",
+  "review_type": "refund_exception_approval",
+  "requested_role": "support_manager",
+  "requested_authority": "approve_refund_exception",
+  "customer_request_summary": "Customer reports damaged item and open chargeback, and would accept replacement.",
+  "accepted_artifacts": [
+    "policy_findings_pf_101",
+    "order_summary_order_202",
+    "chargeback_status_cb_303",
+    "rules_result_rr_404"
+  ],
+  "unresolved_questions": [
+    "Whether replacement may proceed while chargeback remains open."
+  ],
+  "agent_recommendation": {
+    "type": "proposal_only",
+    "recommendation": "request_manager_review_before promising replacement or refund"
+  },
+  "decision_options": [
+    "approve_refund_exception",
+    "approve_replacement_exception",
+    "reject_exception",
+    "request_more_information"
+  ],
+  "expires_at": "2026-08-03T16:00:00Z"
+}

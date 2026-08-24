@@ -1,0 +1,33 @@
+{
+  "human_oversight_points": [
+    {
+      "point": "before_external_action",
+      "required_for": [
+        "refund_exception",
+        "replacement_exception",
+        "policy_override"
+      ],
+      "review_type": "approval",
+      "required_role": "support_manager"
+    },
+    {
+      "point": "before_customer_response",
+      "required_for": [
+        "high_risk_language",
+        "uncertain_claims",
+        "sensitive_customer_context"
+      ],
+      "review_type": "content_review",
+      "required_role": "support_agent"
+    },
+    {
+      "point": "after_completion",
+      "required_for": [
+        "sampled_quality_review",
+        "compliance_audit"
+      ],
+      "review_type": "audit",
+      "required_role": "compliance_reviewer"
+    }
+  ]
+}

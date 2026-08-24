@@ -1,0 +1,18 @@
+{
+  "escalation_path": {
+    "escalation_id": "esc_701",
+    "workflow_id": "refund_case_123",
+    "trigger": "conflicting_authoritative_evidence",
+    "source_node": "aggregate_composite",
+    "destination": "policy_owner_review_queue",
+    "requested_role": "policy_owner",
+    "requested_authority": "resolve_policy_conflict",
+    "accepted_artifacts": [
+      "policy_findings_pf_101",
+      "rules_result_rr_404"
+    ],
+    "unresolved_question": "Which policy section applies when an open chargeback and replacement request overlap?",
+    "deadline": "2026-08-04T10:00:00Z",
+    "fallback_on_timeout": "safe_stop_with_explanation"
+  }
+}

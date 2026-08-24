@@ -1,0 +1,22 @@
+{
+  "decision_id": "decision_901",
+  "workflow_id": "refund_case_123",
+  "review_packet_id": "review_501",
+  "reviewer_role": "support_manager",
+  "reviewer_id": "manager_42",
+  "decision": "approve_replacement_exception",
+  "decision_scope": {
+    "order_id": "order_456",
+    "item_id": "item_1",
+    "approved_action": "offer_replacement",
+    "maximum_value": 129.99,
+    "currency": "USD"
+  },
+  "conditions": [
+    "Customer must withdraw chargeback before replacement is shipped."
+  ],
+  "evidence_snapshot_ref": "evidence_snapshot:refund_case_123:v7",
+  "reviewed_state_version": 7,
+  "expires_at": "2026-08-03T16:00:00Z",
+  "notes": "Replacement may be offered after chargeback withdrawal is confirmed."
+}

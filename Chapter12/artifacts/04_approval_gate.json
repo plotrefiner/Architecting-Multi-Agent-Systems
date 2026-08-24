@@ -1,0 +1,21 @@
+{
+  "approval_gate": "refund_exception_approval_gate_v1",
+  "required_for": "execute_approved_refund",
+  "required_approval": {
+    "role": "support_manager",
+    "decision_type": "approve_refund_exception",
+    "scope_fields": [
+      "workflow_id",
+      "order_id",
+      "item_id",
+      "amount",
+      "currency",
+      "policy_version",
+      "evidence_snapshot_ref"
+    ],
+    "expiry_required": true
+  },
+  "on_missing_approval": "route_to_human_review",
+  "on_expired_approval": "request_reapproval",
+  "on_scope_mismatch": "reject_action_command"
+}

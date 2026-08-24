@@ -1,0 +1,72 @@
+{
+  "human_role": {
+    "human_role": "",
+    "authority_scope": [],
+    "must_not": [],
+    "decision_contract": "",
+    "review_interface": "",
+    "audit_required": true
+  },
+  "approval_gate": {
+    "approval_gate": "",
+    "required_for": "",
+    "required_role": "",
+    "required_scope_fields": [],
+    "on_missing_approval": "",
+    "on_expired_approval": "",
+    "on_scope_mismatch": ""
+  },
+  "review_packet": {
+    "review_packet_id": "",
+    "workflow_id": "",
+    "review_type": "",
+    "requested_role": "",
+    "requested_authority": "",
+    "customer_request_summary": "",
+    "accepted_artifacts": [],
+    "unresolved_questions": [],
+    "agent_recommendation": {
+      "type": "proposal_only",
+      "recommendation": ""
+    },
+    "decision_options": [],
+    "expires_at": ""
+  },
+  "handoff_policy": {
+    "task_class": "",
+    "handoff_required_if": [],
+    "handoff_destination": "",
+    "fallback_on_no_reviewer": ""
+  },
+  "correction_record": {
+    "correction_id": "",
+    "workflow_id": "",
+    "corrected_artifact_ref": "",
+    "corrected_by_role": "",
+    "correction_type": "",
+    "reason_codes": [],
+    "affected_components": [],
+    "should_update_memory": false,
+    "should_add_eval_case": true
+  },
+  "learning_signal": {
+    "signal_id": "",
+    "source": "",
+    "signal_type": "",
+    "target_component": "",
+    "task_class": "",
+    "expected_behavior": "",
+    "include_in_regression_suite": true
+  },
+  "audit_trail": {
+    "workflow_id": "",
+    "user_request_ref": "",
+    "workflow_graph_version": "",
+    "plan_ref": "",
+    "accepted_artifacts": [],
+    "human_review": {},
+    "action": {},
+    "final_response_ref": "",
+    "terminal_status": ""
+  }
+}

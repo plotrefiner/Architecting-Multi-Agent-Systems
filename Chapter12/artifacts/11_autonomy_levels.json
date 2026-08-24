@@ -1,0 +1,41 @@
+{
+  "autonomy_levels": {
+    "policy_only_question": {
+      "level": 3,
+      "allowed_actions": [
+        "retrieve_policy",
+        "draft_and_release_grounded_response"
+      ],
+      "human_required": false
+    },
+    "missing_order_identifier": {
+      "level": 3,
+      "allowed_actions": [
+        "request_required_field"
+      ],
+      "human_required": false
+    },
+    "standard_refund_with_complete_evidence": {
+      "level": 2,
+      "allowed_actions": [
+        "recommend_standard_outcome",
+        "draft_response"
+      ],
+      "human_required_for": [
+        "customer_visible_action"
+      ]
+    },
+    "exception_or_chargeback_conflict": {
+      "level": 1,
+      "allowed_actions": [
+        "prepare_evidence_packet",
+        "draft_conditional_response"
+      ],
+      "human_required_for": [
+        "approval",
+        "customer_visible_commitment",
+        "external_action"
+      ]
+    }
+  }
+}

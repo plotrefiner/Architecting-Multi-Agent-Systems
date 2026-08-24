@@ -1,0 +1,25 @@
+{
+  "evidence_coverage": {
+    "coverage_contract": "composite_refund_coverage_v1",
+    "required_claims": [
+      {
+        "claim": "applicable_return_policy",
+        "status": "covered"
+      },
+      {
+        "claim": "order_and_item_identity",
+        "status": "covered"
+      },
+      {
+        "claim": "chargeback_status",
+        "status": "missing"
+      },
+      {
+        "claim": "exception_authority",
+        "status": "missing"
+      }
+    ],
+    "coverage_score": 0.5,
+    "handoff_required": true
+  }
+}

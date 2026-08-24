@@ -1,0 +1,22 @@
+{
+  "correction_record": {
+    "correction_id": "corr_601",
+    "workflow_id": "refund_case_123",
+    "corrected_artifact_ref": "artifact:draft_501",
+    "corrected_by_role": "support_agent",
+    "correction_type": "unsupported_claim",
+    "original_text": "Your replacement has been approved.",
+    "corrected_text": "Your request has been sent for review because replacement approval depends on the open chargeback status.",
+    "reason_codes": [
+      "approval_implied_without_decision",
+      "chargeback_conflict_unresolved"
+    ],
+    "affected_components": [
+      "response_writer_agent",
+      "verifier_agent"
+    ],
+    "should_update_memory": false,
+    "should_add_eval_case": true,
+    "requires_policy_owner_review": false
+  }
+}

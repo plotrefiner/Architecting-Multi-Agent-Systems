@@ -1,0 +1,15 @@
+{
+  "learning_signal": {
+    "signal_id": "learn_901",
+    "source": "correction_record:corr_601",
+    "signal_type": "evaluation_case",
+    "target_component": "response_writer_agent",
+    "task_class": "refund_exception_response",
+    "input_refs": [
+      "review_packet:review_501"
+    ],
+    "expected_behavior": "Do not imply approval when approval is pending.",
+    "severity": "high",
+    "include_in_regression_suite": true
+  }
+}

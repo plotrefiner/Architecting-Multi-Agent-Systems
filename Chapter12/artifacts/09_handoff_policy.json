@@ -1,0 +1,33 @@
+{
+  "handoff_policy": {
+    "task_class": "refund_support_response",
+    "handoff_required_if": [
+      {
+        "signal": "evidence_coverage",
+        "operator": "<",
+        "threshold": 0.85
+      },
+      {
+        "signal": "unsupported_claim_count",
+        "operator": ">",
+        "threshold": 0
+      },
+      {
+        "signal": "risk_level",
+        "operator": "in",
+        "threshold": [
+          "high",
+          "regulated",
+          "financial_exception"
+        ]
+      },
+      {
+        "signal": "approval_required",
+        "operator": "==",
+        "threshold": true
+      }
+    ],
+    "handoff_destination": "human_review_queue",
+    "fallback_on_no_reviewer": "safe_stop_or_wait"
+  }
+}

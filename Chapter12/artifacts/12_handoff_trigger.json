@@ -1,0 +1,15 @@
+{
+  "handoff_trigger": {
+    "workflow_id": "refund_case_123",
+    "trigger_type": "policy_exception_required",
+    "source_node": "aggregate_composite",
+    "signals": {
+      "risk_level": "financial_exception",
+      "evidence_coverage": 0.9,
+      "unsupported_claim_count": 0,
+      "approval_required": true
+    },
+    "destination": "support_manager_review",
+    "packet_ref": "review_packet:review_501"
+  }
+}

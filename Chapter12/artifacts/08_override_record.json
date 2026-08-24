@@ -1,0 +1,13 @@
+{
+  "override_record": {
+    "override_id": "override_301",
+    "workflow_id": "refund_case_123",
+    "original_recommendation": "safe_stop_due_to_chargeback_conflict",
+    "human_decision": "approve_replacement_exception",
+    "reviewer_role": "support_manager",
+    "reason_code": "customer_retention_exception",
+    "policy_allows_override": true,
+    "evidence_snapshot_ref": "evidence_snapshot:refund_case_123:v7",
+    "requires_follow_up_audit": true
+  }
+}

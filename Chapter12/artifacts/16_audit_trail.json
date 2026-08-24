@@ -1,0 +1,29 @@
+{
+  "audit_trail": {
+    "workflow_id": "refund_case_123",
+    "user_request_ref": "request:req_789",
+    "workflow_graph_version": "refund_support_workflow_graph_v1",
+    "plan_ref": "plan_001",
+    "accepted_artifacts": [
+      "policy_findings_pf_101",
+      "order_summary_order_202",
+      "chargeback_status_cb_303",
+      "draft_response_draft_501",
+      "verification_result_verify_601"
+    ],
+    "human_review": {
+      "review_packet_id": "review_501",
+      "reviewer_role": "support_manager",
+      "decision_id": "decision_901",
+      "decision": "approve_replacement_exception",
+      "evidence_snapshot_ref": "evidence_snapshot:refund_case_123:v7"
+    },
+    "action": {
+      "command_id": "cmd_replacement_1001",
+      "idempotency_key": "replacement_order_456_item_1_decision_901",
+      "tool_outcome": "replacement_offer_recorded"
+    },
+    "final_response_ref": "response:resp_1201",
+    "terminal_status": "completed_with_human_approval"
+  }
+}

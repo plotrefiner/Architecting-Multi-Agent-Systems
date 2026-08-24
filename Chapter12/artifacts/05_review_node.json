@@ -1,0 +1,25 @@
+{
+  "node_id": "await_manager_review",
+  "node_type": "human_review",
+  "review_type": "refund_exception_approval",
+  "required_role": "support_manager",
+  "input_packet_contract": "refund_exception_review_packet_v1",
+  "decision_contract": "support_manager_decision_v1",
+  "decision_options": [
+    "approve_refund_exception",
+    "approve_replacement_exception",
+    "reject_exception",
+    "request_more_information"
+  ],
+  "deadline": "2026-08-03T16:00:00Z",
+  "allowed_edits": [
+    "modify_customer_response_guidance",
+    "request_additional_evidence"
+  ],
+  "prohibited_edits": [
+    "change_policy_version",
+    "change_order_id",
+    "execute_action_directly"
+  ],
+  "failure_destination": "review_expired"
+}

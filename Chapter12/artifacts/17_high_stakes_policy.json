@@ -1,0 +1,29 @@
+{
+  "high_stakes_policy": {
+    "workflow_class": "financial_customer_action",
+    "mandatory_controls": [
+      "human_approval",
+      "evidence_snapshot",
+      "approval_expiry",
+      "idempotency_key",
+      "post_action_audit"
+    ],
+    "dual_approval_required_if": [
+      "amount_above_threshold",
+      "policy_override",
+      "high_risk_customer_segment"
+    ],
+    "model_may_do": [
+      "retrieve_evidence",
+      "draft_summary",
+      "identify_uncertainty",
+      "prepare_review_packet"
+    ],
+    "model_must_not_do": [
+      "approve_exception",
+      "execute_action",
+      "hide_uncertainty",
+      "override_reviewer"
+    ]
+  }
+}
