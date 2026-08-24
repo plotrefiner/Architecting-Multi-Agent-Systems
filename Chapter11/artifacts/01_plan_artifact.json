@@ -1,0 +1,44 @@
+{
+  "plan_id": "plan_001",
+  "workflow_id": "refund_case_123",
+  "planner": "case_planner",
+  "planning_purpose": "determine_required_evidence_for_composite_case",
+  "input_state_version": 4,
+  "status": "proposed",
+  "tasks": [
+    {
+      "task_id": "task_policy",
+      "responsibility": "retrieve_policy",
+      "owner": "policy_retrieval_service",
+      "reason": "Refund and chargeback policy may affect available options.",
+      "required": true,
+      "output_contract": "policy_findings_v1"
+    },
+    {
+      "task_id": "task_order",
+      "responsibility": "retrieve_order",
+      "owner": "order_lookup_service",
+      "reason": "Eligibility depends on delivery date and item status.",
+      "required": true,
+      "output_contract": "order_summary_v1"
+    },
+    {
+      "task_id": "task_chargeback",
+      "responsibility": "retrieve_chargeback_status",
+      "owner": "chargeback_lookup_service",
+      "reason": "An open chargeback may affect refund or replacement handling.",
+      "required": true,
+      "output_contract": "chargeback_status_v1"
+    }
+  ],
+  "prohibited_tasks": [
+    "approve_refund",
+    "issue_refund",
+    "promise_replacement"
+  ],
+  "budget": {
+    "maximum_tasks": 6,
+    "maximum_model_calls": 3,
+    "deadline_seconds": 90
+  }
+}
