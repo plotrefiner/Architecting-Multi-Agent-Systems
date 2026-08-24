@@ -1,0 +1,18 @@
+{
+  "human_role": "support_manager",
+  "authority_scope": [
+    "approve_refund_exception",
+    "approve_replacement_exception",
+    "reject_exception_request",
+    "request_additional_evidence"
+  ],
+  "must_not": [
+    "modify_system_policy",
+    "bypass_required_audit",
+    "approve_without_evidence_packet",
+    "execute_action_directly"
+  ],
+  "decision_contract": "support_manager_decision_v1",
+  "review_interface": "manager_review_queue",
+  "audit_required": true
+}
