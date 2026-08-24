@@ -1,0 +1,27 @@
+{
+  "parallel_group": {
+    "group_id": "refund_evidence_collection_v1",
+    "workflow_id": "refund_case_123",
+    "start_condition": "composite_refund_case_with_required_fields",
+    "tasks": [
+      {
+        "task": "retrieve_policy",
+        "owner": "policy_retrieval_service",
+        "output_contract": "policy_findings_v1"
+      },
+      {
+        "task": "retrieve_order",
+        "owner": "order_lookup_service",
+        "output_contract": "order_summary_v1"
+      },
+      {
+        "task": "retrieve_chargeback_status",
+        "owner": "chargeback_lookup_service",
+        "output_contract": "chargeback_status_v1"
+      }
+    ],
+    "join_condition": "all_required_artifacts_accepted",
+    "deadline_seconds": 20,
+    "on_partial_result": "apply_failure_policy"
+  }
+}
