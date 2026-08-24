@@ -1,0 +1,21 @@
+{
+  "framework_neutral_spec": {
+    "workflow_graph": "refund_support_workflow_graph_v1",
+    "responsibility_spec": "refund_support_roles_v1",
+    "information_spec": "refund_support_information_v1",
+    "delivery_spec": "refund_support_delivery_v1",
+    "hitl_spec": "refund_support_hitl_v1",
+    "quality_spec": "refund_support_quality_v1",
+    "security_governance_spec": "refund_support_security_governance_v1",
+    "runtime_requirements": [
+      "stateful_execution",
+      "conditional_routing",
+      "parallel_tasks",
+      "human_wait_nodes",
+      "tool_permission_gateway",
+      "tracing",
+      "replay_safe_mode",
+      "deployment_monitoring"
+    ]
+  }
+}

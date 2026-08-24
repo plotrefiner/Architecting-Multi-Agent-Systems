@@ -1,0 +1,65 @@
+{
+  "execution_mode_template": {
+    "workflow_path": "",
+    "execution_mode": "sequential|parallel|queue|human_review|hybrid",
+    "reason": "",
+    "required_join": "",
+    "maximum_latency_seconds": ""
+  },
+  "optimization_policy_template": {
+    "model_routing_policy": {
+      "task": "",
+      "default_model_or_component": "",
+      "fallback": "",
+      "routing_signals": [],
+      "maximum_calls_per_workflow": ""
+    },
+    "cache_policy": {
+      "operation": "",
+      "cacheable": true,
+      "key": "",
+      "ttl_seconds": 0,
+      "invalidate_on": []
+    },
+    "batch_policy": {
+      "operation": "",
+      "batchable": true,
+      "maximum_batch_size": 0,
+      "maximum_wait_seconds": 0,
+      "isolation_key": "",
+      "prohibited_for": []
+    }
+  },
+  "resilience_policy": {
+    "timeouts": {},
+    "retry_policy": {},
+    "fallback_policy": {},
+    "rate_limits": {},
+    "token_budgets": {},
+    "degradation_policy": {}
+  },
+  "deployment_rollout_rollback_template": {
+    "deployment_topology": {
+      "pattern": "",
+      "services": {},
+      "state_store": "",
+      "message_broker": "",
+      "artifact_store": "",
+      "observability_pipeline": "",
+      "deployment_environment": ""
+    },
+    "rollout_policy": {
+      "stages": [],
+      "metrics_required": [],
+      "rollback_conditions": []
+    },
+    "kill_switches": {
+      "disable_auto_release": {},
+      "disable_planner": {},
+      "disable_approved_action_service": {},
+      "disable_security_controls": {
+        "allowed": false
+      }
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "framework_decision": {
+    "decision_id": "framework_decision_refund_support_v1",
+    "selected_framework": "",
+    "primary_reason": "",
+    "secondary_reason": "",
+    "rejected_options": [
+      {
+        "framework": "",
+        "reason": ""
+      }
+    ],
+    "required_extensions": [
+      "custom_tool_permission_gateway",
+      "custom_approval_gate",
+      "custom_evaluation_harness"
+    ],
+    "risks": [
+      "vendor_lock_in",
+      "limited_replay_support",
+      "custom_human_review_integration_required"
+    ],
+    "exit_strategy": "preserve_framework_neutral_specs_and_contracts"
+  }
+}

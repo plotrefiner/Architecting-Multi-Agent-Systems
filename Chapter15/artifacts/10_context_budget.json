@@ -1,0 +1,20 @@
+{
+  "context_budget": {
+    "response_writer_agent": {
+      "maximum_input_tokens": 6000,
+      "reserved_for_user_request": 500,
+      "reserved_for_policy_evidence": 2000,
+      "reserved_for_customer_context": 1000,
+      "reserved_for_constraints": 500,
+      "reserved_for_output_schema": 500,
+      "overflow_behavior": "summarize_or_select_top_evidence"
+    },
+    "verifier_agent": {
+      "maximum_input_tokens": 4000,
+      "reserved_for_claims": 800,
+      "reserved_for_evidence": 2200,
+      "reserved_for_rubric": 500,
+      "overflow_behavior": "reject_if_claims_cannot_be_supported"
+    }
+  }
+}

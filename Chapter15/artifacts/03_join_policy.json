@@ -1,0 +1,16 @@
+{
+  "join_policy": {
+    "join_id": "refund_evidence_join_v1",
+    "required": [
+      "policy_findings",
+      "order_summary"
+    ],
+    "conditionally_required": {
+      "chargeback_status": "chargeback_mentioned_or_detected"
+    },
+    "maximum_wait_seconds": 20,
+    "on_missing_required": "request_retry_or_safe_stop",
+    "on_missing_conditionally_required": "human_review_or_wait",
+    "on_optional_missing": "continue_without_optional_enrichment"
+  }
+}

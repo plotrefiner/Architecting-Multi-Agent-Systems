@@ -1,0 +1,29 @@
+{
+  "degradation_policy": {
+    "mode": "high_load",
+    "changes": [
+      {
+        "path": "policy_only_question",
+        "behavior": "use_cached_policy_and_template_response"
+      },
+      {
+        "path": "composite_refund_case",
+        "behavior": "collect_required_evidence_only"
+      },
+      {
+        "path": "optional_verification",
+        "behavior": "disable_for_low_risk_paths"
+      },
+      {
+        "path": "external_actions",
+        "behavior": "require_current_approval_and_reconciliation_or_pause"
+      }
+    ],
+    "must_not_disable": [
+      "approval_gates",
+      "pii_redaction",
+      "tool_permission_checks",
+      "audit_logging"
+    ]
+  }
+}

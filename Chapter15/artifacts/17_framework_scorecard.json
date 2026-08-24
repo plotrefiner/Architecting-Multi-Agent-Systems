@@ -1,0 +1,20 @@
+{
+  "framework_scorecard": {
+    "framework_name": "",
+    "supports_graph_workflows": "",
+    "supports_stateful_execution": "",
+    "supports_conditional_routing": "",
+    "supports_parallel_execution": "",
+    "supports_human_in_the_loop": "",
+    "supports_tool_permission_boundaries": "",
+    "supports_memory_controls": "",
+    "supports_tracing": "",
+    "supports_replay": "",
+    "supports_evaluation_hooks": "",
+    "supports_async_or_queue_execution": "",
+    "supports_deployment_target": "",
+    "fits_team_skillset": "",
+    "vendor_lock_in_risk": "",
+    "decision": ""
+  }
+}

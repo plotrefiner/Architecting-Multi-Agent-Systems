@@ -1,0 +1,14 @@
+{
+  "production_alert": {
+    "metric": "p95_workflow_latency",
+    "condition": "above_30_seconds_for_15_minutes",
+    "affected_path": "composite_refund_chargeback",
+    "suspected_owner": "chargeback_lookup_service",
+    "first_debugging_steps": [
+      "check_chargeback_queue_age",
+      "check_tool_timeout_rate",
+      "check_retry_counts"
+    ],
+    "severity": "medium"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "environment_policy": {
+    "local": {
+      "real_customer_data": false,
+      "real_action_tools": false
+    },
+    "staging": {
+      "real_customer_data": "masked_or_synthetic",
+      "real_action_tools": false
+    },
+    "replay": {
+      "uses_recorded_tool_outputs": true,
+      "real_action_tools": false,
+      "send_customer_messages": false
+    },
+    "production": {
+      "real_customer_data": true,
+      "real_action_tools": "approval_required",
+      "monitoring_required": true
+    }
+  }
+}

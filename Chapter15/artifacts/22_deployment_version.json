@@ -1,0 +1,18 @@
+{
+  "deployment_version": {
+    "deployment_id": "refund_support_prod_2026_08_15",
+    "workflow_graph_version": "refund_support_workflow_graph_v1",
+    "model_routing_policy_version": "model_routing_v3",
+    "prompt_versions": {
+      "response_writer_agent": "prompt_v12",
+      "verifier_agent": "prompt_v7"
+    },
+    "tool_versions": {
+      "policy_search": "v2",
+      "order_lookup": "v4",
+      "chargeback_lookup": "v1"
+    },
+    "security_policy_version": "security_governance_v1",
+    "quality_dataset_version": "2026.08.01"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "concurrency_limits": {
+    "workflow": "refund_support",
+    "maximum_parallel_tasks_per_workflow": 4,
+    "maximum_active_workflows_per_tenant": 100,
+    "maximum_policy_retrieval_workers": 20,
+    "maximum_order_lookup_workers": 10,
+    "maximum_chargeback_lookup_workers": 5,
+    "on_limit_exceeded": "queue_or_defer"
+  }
+}

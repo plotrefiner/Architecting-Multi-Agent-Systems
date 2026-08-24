@@ -1,0 +1,32 @@
+{
+  "cache_policy": {
+    "policy_retrieval": {
+      "cacheable": true,
+      "key": "policy_version:region:query_hash",
+      "ttl_seconds": 86400,
+      "invalidate_on": [
+        "policy_version_change"
+      ]
+    },
+    "order_lookup": {
+      "cacheable": true,
+      "key": "order_id:requested_fields",
+      "ttl_seconds": 300,
+      "invalidate_on": [
+        "order_status_change"
+      ]
+    },
+    "chargeback_status": {
+      "cacheable": true,
+      "key": "order_id:chargeback_status",
+      "ttl_seconds": 60,
+      "invalidate_on": [
+        "chargeback_event_received"
+      ]
+    },
+    "approval_decision": {
+      "cacheable": false,
+      "reason": "approval_scope_and_expiry_must_be_validated_currently"
+    }
+  }
+}

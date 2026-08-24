@@ -1,0 +1,21 @@
+{
+  "rate_limit_policy": {
+    "model_calls": {
+      "maximum_per_workflow": 4,
+      "maximum_per_user_per_minute": 10,
+      "on_limit": "defer_or_safe_stop"
+    },
+    "policy_search": {
+      "maximum_per_workflow": 2,
+      "on_limit": "use_valid_cache_or_safe_stop"
+    },
+    "order_lookup": {
+      "maximum_per_workflow": 2,
+      "on_limit": "queue_or_wait"
+    },
+    "approved_action_service": {
+      "maximum_per_approved_command": 1,
+      "on_limit": "do_not_retry_without_reconciliation"
+    }
+  }
+}

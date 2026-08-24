@@ -1,0 +1,26 @@
+{
+  "token_budget_policy": {
+    "workflow": "refund_support",
+    "maximum_total_input_tokens": 20000,
+    "maximum_total_output_tokens": 4000,
+    "per_component": {
+      "router_agent": {
+        "input": 1000,
+        "output": 200
+      },
+      "case_planner": {
+        "input": 3000,
+        "output": 800
+      },
+      "response_writer_agent": {
+        "input": 6000,
+        "output": 600
+      },
+      "verifier_agent": {
+        "input": 4000,
+        "output": 800
+      }
+    },
+    "on_budget_exhaustion": "compress_context_or_safe_stop"
+  }
+}

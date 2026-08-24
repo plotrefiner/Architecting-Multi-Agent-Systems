@@ -1,0 +1,14 @@
+{
+  "batch_policy": {
+    "operation": "sampled_response_verification",
+    "batchable": true,
+    "maximum_batch_size": 50,
+    "maximum_wait_seconds": 300,
+    "isolation_key": "data_classification",
+    "on_item_failure": "record_item_failure_continue_batch",
+    "prohibited_for": [
+      "approved_action_execution",
+      "human_approval_decision"
+    ]
+  }
+}

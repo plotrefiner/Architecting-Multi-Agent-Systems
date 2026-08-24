@@ -1,0 +1,32 @@
+{
+  "rollout_policy": {
+    "stages": [
+      {
+        "stage": "offline_evaluation",
+        "required": "release_gate_pass"
+      },
+      {
+        "stage": "shadow_mode",
+        "traffic_percentage": 100,
+        "customer_visible": false,
+        "required_duration_days": 7
+      },
+      {
+        "stage": "limited_beta",
+        "traffic_percentage": 5,
+        "customer_visible": true,
+        "human_review_required": true
+      },
+      {
+        "stage": "percentage_rollout",
+        "traffic_percentage": 25,
+        "rollback_if": [
+          "unsupported_claim_rate_above_threshold",
+          "approval_gate_bypass_detected",
+          "cost_above_budget",
+          "p95_latency_above_slo"
+        ]
+      }
+    ]
+  }
+}

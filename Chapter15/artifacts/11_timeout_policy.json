@@ -1,0 +1,28 @@
+{
+  "timeout_policy": {
+    "intent_classification": {
+      "timeout_seconds": 2,
+      "on_timeout": "fallback_to_safe_route"
+    },
+    "policy_retrieval": {
+      "timeout_seconds": 5,
+      "on_timeout": "retry_once_then_safe_stop"
+    },
+    "chargeback_lookup": {
+      "timeout_seconds": 10,
+      "on_timeout": "retry_or_human_review"
+    },
+    "response_drafting": {
+      "timeout_seconds": 8,
+      "on_timeout": "use_template_or_escalate"
+    },
+    "human_review": {
+      "timeout_seconds": 86400,
+      "on_timeout": "review_expired"
+    },
+    "workflow": {
+      "timeout_seconds": 120,
+      "on_timeout": "safe_stop_or_wait_state"
+    }
+  }
+}

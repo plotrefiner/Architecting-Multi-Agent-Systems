@@ -1,0 +1,13 @@
+{
+  "queue_worker": {
+    "queue": "chargeback_lookup_queue",
+    "responsibility": "retrieve_chargeback_status",
+    "input_contract": "chargeback_lookup_request_v1",
+    "output_contract": "chargeback_status_v1",
+    "maximum_concurrency": 5,
+    "visibility_timeout_seconds": 30,
+    "maximum_attempts": 2,
+    "dead_letter_queue": "chargeback_lookup_dlq",
+    "idempotency_key": "workflow_id:order_id:chargeback_status"
+  }
+}

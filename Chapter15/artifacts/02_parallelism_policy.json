@@ -1,0 +1,20 @@
+{
+  "parallelism_policy": {
+    "policy_only_question": {
+      "execution": "sequential",
+      "reason": "single evidence source and short path"
+    },
+    "missing_order_identifier": {
+      "execution": "no_parallel_work",
+      "reason": "required field missing"
+    },
+    "composite_refund_chargeback": {
+      "execution": "parallel_evidence_collection",
+      "reason": "policy, order, and chargeback evidence are independent"
+    },
+    "high_risk_exception": {
+      "execution": "parallel_evidence_then_human_review",
+      "reason": "evidence can be collected before human authority"
+    }
+  }
+}

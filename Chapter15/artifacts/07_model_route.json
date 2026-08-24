@@ -1,0 +1,17 @@
+{
+  "model_route": {
+    "workflow_id": "refund_case_123",
+    "task": "draft_conditional_response",
+    "task_class": "composite_refund_chargeback",
+    "risk_level": "medium",
+    "context_tokens_estimate": 3200,
+    "selected_model": "medium_language_model",
+    "reason_codes": [
+      "customer_facing_generation",
+      "accepted_evidence_available",
+      "no_high_risk_policy_exception_decision"
+    ],
+    "fallback_model": "larger_reasoning_model",
+    "fallback_condition": "structured_output_failure"
+  }
+}

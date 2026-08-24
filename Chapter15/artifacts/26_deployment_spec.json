@@ -1,0 +1,40 @@
+{
+  "deployment_spec": "refund_support_deployment_v1",
+  "execution": {
+    "policy_only": "sequential_sync",
+    "missing_required_field": "controller_wait",
+    "composite_refund_case": "parallel_evidence_collection_with_join",
+    "human_review": "async_review_queue",
+    "approved_action": "idempotent_action_service"
+  },
+  "optimization": {
+    "model_tiering": "enabled",
+    "model_routing": "task_risk_budget_based",
+    "caching": "policy_and_short_lived_tool_cache",
+    "batching": "offline_and_background_only",
+    "token_budgets": "per_component_and_per_workflow"
+  },
+  "resilience": {
+    "timeouts": "per_component_and_workflow",
+    "retry_owner": "workflow_controller",
+    "fallbacks": "safe_and_tested",
+    "rate_limits": "per_workflow_user_tenant_tool_model",
+    "degradation": "safety_controls_never_disabled"
+  },
+  "framework": {
+    "selection_record": "framework_decision_refund_support_v1",
+    "framework_neutral_specs_preserved": true
+  },
+  "deployment": {
+    "topology": "hybrid_sync_async_workflow",
+    "environments": [
+      "local",
+      "staging",
+      "replay",
+      "production"
+    ],
+    "rollout": "staged",
+    "monitoring": "required",
+    "kill_switches": "enabled"
+  }
+}

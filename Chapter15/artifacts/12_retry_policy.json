@@ -1,0 +1,21 @@
+{
+  "retry_policy": {
+    "retry_owner": "workflow_controller",
+    "maximum_total_attempts_per_workflow": 8,
+    "retryable": [
+      "timeout",
+      "rate_limited",
+      "temporarily_unavailable",
+      "structured_output_parse_failure"
+    ],
+    "non_retryable": [
+      "permission_denied",
+      "missing_required_input",
+      "approval_expired",
+      "policy_rejection",
+      "invalid_schema_version"
+    ],
+    "backoff": "exponential_with_jitter",
+    "on_exhaustion": "safe_stop_or_human_escalation"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "deployment_topology": {
+    "pattern": "hybrid_sync_async_workflow",
+    "services": {
+      "api_gateway": "handles_user_requests_and_authentication",
+      "workflow_controller": "owns_state_transitions_and_budgets",
+      "model_gateway": "routes_model_calls_and_enforces_token_budgets",
+      "tool_gateway": "enforces_tool_permissions_and_argument_validation",
+      "policy_service": "retrieves_policy_evidence",
+      "order_service": "retrieves_order_summary",
+      "chargeback_worker": "processes_chargeback_lookup_queue",
+      "human_review_app": "supports_review_packets_and_decisions",
+      "approved_action_service": "executes_scoped_idempotent_actions",
+      "artifact_store": "stores_immutable_artifacts",
+      "observability_pipeline": "collects_traces_metrics_and_logs"
+    },
+    "state_store": "durable_workflow_state",
+    "message_broker": "queues_and_events",
+    "deployment_environment": "production"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "model_tiering_policy": {
+    "intent_classification": {
+      "default": "small_classifier",
+      "fallback": "medium_reasoning_model",
+      "fallback_condition": "confidence_below_0_85"
+    },
+    "policy_retrieval": {
+      "default": "retrieval_service",
+      "model_use": "none_unless_summary_required"
+    },
+    "response_drafting": {
+      "default": "medium_language_model",
+      "upgrade_condition": "high_complexity_or_sensitive_case"
+    },
+    "planning": {
+      "default": "bounded_reasoning_model",
+      "maximum_calls_per_workflow": 1
+    },
+    "verification": {
+      "default": "verifier_model",
+      "retention_condition": "measured_lift_above_threshold"
+    }
+  }
+}

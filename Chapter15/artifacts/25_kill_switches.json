@@ -1,0 +1,19 @@
+{
+  "kill_switches": {
+    "disable_auto_release": {
+      "effect": "route_customer_responses_to_human_review",
+      "safe_default": true
+    },
+    "disable_planner": {
+      "effect": "use_deterministic_routes_only",
+      "safe_default": true
+    },
+    "disable_approved_action_service": {
+      "effect": "pause_external_actions",
+      "safe_default": true
+    },
+    "disable_security_controls": {
+      "allowed": false
+    }
+  }
+}

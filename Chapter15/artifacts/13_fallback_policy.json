@@ -1,0 +1,23 @@
+{
+  "fallback_policy": [
+    {
+      "failure": "small_classifier_low_confidence",
+      "fallback": "medium_reasoning_model",
+      "maximum_fallbacks": 1
+    },
+    {
+      "failure": "response_generation_timeout",
+      "fallback": "template_based_response",
+      "condition": "policy_only_low_risk"
+    },
+    {
+      "failure": "chargeback_lookup_unavailable",
+      "fallback": "human_review_or_wait",
+      "condition": "chargeback_required"
+    },
+    {
+      "failure": "approval_gate_rejected",
+      "fallback": "request_reapproval_or_safe_stop"
+    }
+  ]
+}
