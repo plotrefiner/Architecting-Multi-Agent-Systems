@@ -1,0 +1,12 @@
+{
+  "artifact_contract": "sql_validation_result_v1",
+  "artifact_id": "sql_validation_301",
+  "workflow_id": "support_case_123",
+  "producer": "sql_validator",
+  "validated": true,
+  "read_only": true,
+  "allowed_tables": true,
+  "row_limit_present": true,
+  "pii_columns_requested": false,
+  "approved_query_ref": "validated_sql:query_301"
+}

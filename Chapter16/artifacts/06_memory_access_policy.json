@@ -1,0 +1,48 @@
+{
+  "memory_access_policy": {
+    "policy_retrieval_service": {
+      "allowed_memory_types": [
+        "approved_policy",
+        "knowledge_base_article"
+      ],
+      "prohibited_memory_types": [
+        "customer_pii",
+        "private_reviewer_notes"
+      ]
+    },
+    "analytics_sql_agent": {
+      "allowed_memory_types": [
+        "metric_definition",
+        "approved_schema_catalog"
+      ],
+      "prohibited_memory_types": [
+        "raw_customer_records",
+        "payment_data"
+      ]
+    },
+    "response_writer_agent": {
+      "allowed_memory_types": [
+        "accepted_policy_findings",
+        "accepted_customer_context_summary",
+        "accepted_analytics_summary",
+        "communication_preference"
+      ],
+      "prohibited_memory_types": [
+        "raw_sql_result_rows",
+        "internal_risk_score",
+        "private_reviewer_notes"
+      ]
+    },
+    "claim_verifier_agent": {
+      "allowed_memory_types": [
+        "draft_claims",
+        "accepted_evidence",
+        "analytics_result_summary"
+      ],
+      "prohibited_memory_types": [
+        "generator_hidden_reasoning",
+        "approval_interface"
+      ]
+    }
+  }
+}

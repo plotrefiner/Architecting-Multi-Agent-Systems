@@ -1,0 +1,19 @@
+{
+  "artifact_contract": "policy_findings_v1",
+  "artifact_id": "policy_101",
+  "workflow_id": "support_case_123",
+  "producer": "policy_retrieval_service",
+  "findings": [
+    {
+      "claim_id": "policy_claim_1",
+      "claim": "Refunds may be denied when the request falls outside the eligible return window.",
+      "source_id": "refund_policy_v4",
+      "section": "3.2",
+      "confidence": "high"
+    }
+  ],
+  "limitations": [],
+  "evidence_refs": [
+    "policy:refund_policy_v4:section_3_2"
+  ]
+}

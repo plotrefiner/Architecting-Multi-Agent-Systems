@@ -1,0 +1,22 @@
+{
+  "component": "analytics_sql_agent",
+  "type": "agent",
+  "responsibility": "propose_read_only_analytics_query",
+  "may_do": [
+    "interpret_analytics_question",
+    "select_approved_metric_definition",
+    "produce_read_only_sql_candidate",
+    "state_query_assumptions"
+  ],
+  "must_not": [
+    "execute_sql",
+    "query_unapproved_tables",
+    "modify_data",
+    "return_raw_pii",
+    "make_business_decision"
+  ],
+  "input_contract": "analytics_question_context_v1",
+  "output_contract": "sql_candidate_v1",
+  "allowed_tools": [],
+  "state_write_permission": false
+}

@@ -1,0 +1,16 @@
+{
+  "artifact_contract": "sql_candidate_v1",
+  "artifact_id": "sql_candidate_201",
+  "workflow_id": "support_case_123",
+  "producer": "analytics_sql_agent",
+  "question": "What are the top reasons for refund denial this month?",
+  "metric_definition_refs": [
+    "metric:refund_denial_reason_count:v2"
+  ],
+  "sql": "SELECT denial_reason, COUNT(*) AS denial_count FROM refund_cases WHERE decision_date >= DATE_TRUNC('month', CURRENT_DATE) GROUP BY denial_reason ORDER BY denial_count DESC LIMIT 10",
+  "assumptions": [
+    "Uses approved refund_cases aggregate table.",
+    "Counts decisions in the current calendar month."
+  ],
+  "requires_validation": true
+}

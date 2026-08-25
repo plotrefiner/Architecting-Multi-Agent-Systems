@@ -1,0 +1,72 @@
+{
+  "system_requirements": {
+    "system_name": "",
+    "supported_use_cases": [],
+    "unsupported_use_cases": [],
+    "functional_requirements": [],
+    "non_functional_requirements": [],
+    "risk_level": ""
+  },
+  "architecture_decision": {
+    "decision": "",
+    "selected_patterns": [],
+    "rejected_patterns": [],
+    "human_authority_required_for": [],
+    "reason": ""
+  },
+  "role_registry": [
+    {
+      "component": "",
+      "type": "agent|service|deterministic|human",
+      "responsibility": "",
+      "may_do": [],
+      "must_not": [],
+      "input_contract": "",
+      "output_contract": "",
+      "allowed_tools": []
+    }
+  ],
+  "tool_registry": [
+    {
+      "tool": "",
+      "owner": "",
+      "permission": "",
+      "input_contract": "",
+      "output_contract": "",
+      "data_classes": []
+    }
+  ],
+  "graph_spec": {
+    "graph_id": "",
+    "state_owner": "workflow_controller",
+    "start": "",
+    "nodes": {},
+    "edges": [],
+    "terminal_outcomes": []
+  },
+  "implementation_mapping": {
+    "selected_framework": "",
+    "node_mapping": {},
+    "custom_extensions_required": [],
+    "replay_mode": "sandbox_or_recorded_outputs_only"
+  },
+  "evaluation_plan": {
+    "evaluation_layers": [],
+    "datasets": [],
+    "safety_tests": [],
+    "release_gate": {}
+  },
+  "monitoring_and_rollout": {
+    "monitoring_plan": {
+      "dashboards": [],
+      "metrics": [],
+      "alerts": [],
+      "owners": {}
+    },
+    "rollout_plan": {
+      "stages": [],
+      "rollback_conditions": [],
+      "kill_switches": []
+    }
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "artifact_contract": "support_response_draft_v1",
+  "artifact_id": "draft_401",
+  "workflow_id": "support_case_123",
+  "producer": "response_writer_agent",
+  "audience": "support_agent",
+  "draft": "The refund appears to have been denied because the request was outside the eligible return window. The relevant policy states that refund eligibility depends on the return-window rules in Refund Policy v4, section 3.2.",
+  "claims_used": [
+    "policy_claim_1"
+  ],
+  "limitations": [
+    "This draft does not approve or reverse the denial."
+  ],
+  "requires_verification": true
+}

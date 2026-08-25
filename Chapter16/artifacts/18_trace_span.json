@@ -1,0 +1,19 @@
+{
+  "trace_span": {
+    "trace_id": "trace_support_123",
+    "span_id": "span_sql_validate_001",
+    "workflow_id": "support_case_123",
+    "component": "sql_validator",
+    "operation": "validate_sql",
+    "input_refs": [
+      "artifact:sql_candidate_201"
+    ],
+    "output_refs": [
+      "artifact:sql_validation_301"
+    ],
+    "status": "success",
+    "latency_ms": 120,
+    "cost_usd": 0.0,
+    "error_type": null
+  }
+}

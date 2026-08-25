@@ -1,0 +1,38 @@
+{
+  "rollout_plan": {
+    "system": "enterprise_support_intelligence",
+    "stages": [
+      {
+        "stage": "offline_evaluation",
+        "required_exit": "release_gate_pass"
+      },
+      {
+        "stage": "shadow_mode",
+        "duration_days": 7,
+        "customer_visible": false
+      },
+      {
+        "stage": "internal_pilot",
+        "users": "support_agent_beta_group",
+        "mandatory_human_review": true
+      },
+      {
+        "stage": "limited_beta",
+        "traffic_percentage": 5,
+        "enabled_paths": [
+          "policy_only"
+        ]
+      },
+      {
+        "stage": "controlled_rollout",
+        "traffic_percentage": 25,
+        "rollback_conditions": [
+          "unsupported_claim_rate_above_threshold",
+          "sql_policy_violation_detected",
+          "pii_exposure_detected",
+          "p95_latency_above_slo"
+        ]
+      }
+    ]
+  }
+}

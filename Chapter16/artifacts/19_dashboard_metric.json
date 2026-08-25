@@ -1,0 +1,11 @@
+{
+  "metric": "sql_rejection_rate",
+  "definition": "share_of_sql_candidates_rejected_by_sql_validator",
+  "dimensions": [
+    "task_class",
+    "sql_agent_prompt_version",
+    "schema_catalog_version",
+    "metric_definition_version"
+  ],
+  "alert_if": "rate_increases_by_more_than_25_percent_week_over_week"
+}

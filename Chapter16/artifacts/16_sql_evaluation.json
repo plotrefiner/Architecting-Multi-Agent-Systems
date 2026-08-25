@@ -1,0 +1,14 @@
+{
+  "sql_evaluation": {
+    "case_id": "golden_analytics_004",
+    "sql_candidate_ref": "sql_candidate_201",
+    "read_only": true,
+    "allowed_tables": true,
+    "prohibited_columns_used": false,
+    "metric_definition_matched": true,
+    "row_limit_policy_satisfied": true,
+    "execution_allowed": true,
+    "numeric_claims_verified": true,
+    "result": "pass"
+  }
+}

@@ -1,0 +1,107 @@
+{
+  "graph_id": "enterprise_support_workflow_v1",
+  "state_owner": "workflow_controller",
+  "start": "validate_input",
+  "nodes": {
+    "validate_input": "deterministic",
+    "classify_intent": "deterministic_or_small_model",
+    "retrieve_policy": "service",
+    "retrieve_customer_context": "service",
+    "propose_sql": "agent",
+    "validate_sql": "deterministic",
+    "execute_sql": "service",
+    "draft_response": "agent",
+    "verify_claims": "agent",
+    "human_review": "human_wait",
+    "release_response": "controller",
+    "safe_stop": "terminal",
+    "completed": "terminal"
+  },
+  "edges": [
+    [
+      "validate_input",
+      "classify_intent",
+      "input_valid"
+    ],
+    [
+      "validate_input",
+      "safe_stop",
+      "unsupported_or_unsafe_input"
+    ],
+    [
+      "classify_intent",
+      "retrieve_policy",
+      "policy_or_case_question"
+    ],
+    [
+      "classify_intent",
+      "propose_sql",
+      "analytics_question"
+    ],
+    [
+      "retrieve_policy",
+      "retrieve_customer_context",
+      "customer_context_required"
+    ],
+    [
+      "retrieve_policy",
+      "draft_response",
+      "policy_only"
+    ],
+    [
+      "retrieve_customer_context",
+      "draft_response",
+      "case_context_accepted"
+    ],
+    [
+      "propose_sql",
+      "validate_sql",
+      "sql_candidate_created"
+    ],
+    [
+      "validate_sql",
+      "execute_sql",
+      "sql_validated"
+    ],
+    [
+      "validate_sql",
+      "human_review",
+      "sql_requires_review"
+    ],
+    [
+      "execute_sql",
+      "draft_response",
+      "analytics_result_accepted"
+    ],
+    [
+      "draft_response",
+      "verify_claims",
+      "draft_requires_verification"
+    ],
+    [
+      "verify_claims",
+      "release_response",
+      "claims_supported"
+    ],
+    [
+      "verify_claims",
+      "draft_response",
+      "one_redraft_allowed"
+    ],
+    [
+      "verify_claims",
+      "human_review",
+      "human_review_required"
+    ],
+    [
+      "human_review",
+      "release_response",
+      "human_decision_recorded"
+    ],
+    [
+      "release_response",
+      "completed",
+      "response_released"
+    ]
+  ]
+}

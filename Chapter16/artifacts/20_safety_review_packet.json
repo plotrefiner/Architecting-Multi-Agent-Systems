@@ -1,0 +1,36 @@
+{
+  "safety_review_packet": {
+    "system": "enterprise_support_intelligence",
+    "purpose": "Assist support agents with policy-grounded answers, case explanations, and approved analytics summaries.",
+    "unsupported_uses": [
+      "autonomous refund approval",
+      "autonomous policy override",
+      "unrestricted database querying",
+      "legal advice",
+      "external action execution without approval"
+    ],
+    "data_sources": [
+      "approved_policy_documents",
+      "knowledge_base_articles",
+      "order_summary_service",
+      "refund_case_aggregates",
+      "approved_metric_definitions"
+    ],
+    "human_oversight": [
+      "support_manager_exception_review",
+      "policy_owner_conflict_resolution",
+      "security_escalation"
+    ],
+    "guardrails": [
+      "input_validation",
+      "output_validation",
+      "sql_validation",
+      "tool_gateway",
+      "pii_redaction",
+      "approval_gate",
+      "audit_trail"
+    ],
+    "evaluation_summary_ref": "eval_report:enterprise_support_release_v1",
+    "monitoring_plan_ref": "monitoring:enterprise_support_dashboard_v1"
+  }
+}

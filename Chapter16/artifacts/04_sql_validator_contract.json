@@ -1,0 +1,20 @@
+{
+  "component": "sql_validator",
+  "type": "deterministic_service",
+  "responsibility": "validate_read_only_sql",
+  "may_do": [
+    "parse_sql",
+    "check_allowed_tables",
+    "check_allowed_columns",
+    "check_row_limit",
+    "check_aggregation_policy",
+    "reject_unsafe_query"
+  ],
+  "must_not": [
+    "rewrite_query_to_expand_scope",
+    "approve_write_query",
+    "bypass_data_policy"
+  ],
+  "input_contract": "sql_candidate_v1",
+  "output_contract": "sql_validation_result_v1"
+}

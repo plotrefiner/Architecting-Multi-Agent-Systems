@@ -1,0 +1,33 @@
+{
+  "workflow_paths": {
+    "policy_only": {
+      "execution": "short_rag_pipeline",
+      "human_required": false,
+      "write_actions_allowed": false
+    },
+    "customer_case_explanation": {
+      "execution": "rag_plus_customer_context_plus_verification",
+      "human_required_if": [
+        "missing_evidence",
+        "policy_conflict",
+        "high_risk_claim",
+        "exception_requested"
+      ],
+      "write_actions_allowed": false
+    },
+    "analytics_question": {
+      "execution": "sql_validation_plus_read_only_query_plus_numeric_verification",
+      "human_required_if": [
+        "query_outside_allowed_schema",
+        "small_sample_or_sensitive_slice",
+        "business_decision_requested"
+      ],
+      "write_actions_allowed": false
+    },
+    "action_request": {
+      "execution": "human_review_required",
+      "human_required": true,
+      "write_actions_allowed": "only_after_structured_approval"
+    }
+  }
+}

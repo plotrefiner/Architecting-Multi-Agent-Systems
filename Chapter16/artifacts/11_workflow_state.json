@@ -1,0 +1,22 @@
+{
+  "workflow_state": {
+    "workflow_id": "support_case_123",
+    "current_node": "draft_response",
+    "task_class": "customer_case_explanation",
+    "state_version": 6,
+    "accepted_artifacts": [
+      "policy_101",
+      "order_102",
+      "rules_103"
+    ],
+    "pending_artifacts": [],
+    "human_review_status": "not_required",
+    "budgets": {
+      "model_calls_used": 2,
+      "tool_calls_used": 3,
+      "maximum_model_calls": 5,
+      "maximum_tool_calls": 6
+    },
+    "terminal_status": null
+  }
+}

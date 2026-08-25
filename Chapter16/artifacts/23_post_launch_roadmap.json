@@ -1,0 +1,22 @@
+{
+  "post_launch_roadmap": {
+    "month_1": [
+      "monitor_policy_only_and_case_explanation_paths",
+      "review_human_corrections_weekly",
+      "add_regression_tests_from_failures",
+      "tune_model_routing_for_cost"
+    ],
+    "month_2": [
+      "expand_analytics_question_support",
+      "improve_sql_metric_catalog",
+      "reduce_false_human_escalations",
+      "evaluate_verifier_retention_by_task_class"
+    ],
+    "month_3": [
+      "consider_additional_workflow_paths",
+      "perform_security_red_team_review",
+      "review_governance_and_audit_findings",
+      "update_responsible_ai_review_packet"
+    ]
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "case_id": "golden_analytics_004",
+  "task_class": "analytics_question",
+  "user_request": "What were the top refund denial reasons this month?",
+  "expected": {
+    "route": "analytics_question",
+    "required_nodes": [
+      "propose_sql",
+      "validate_sql",
+      "execute_sql",
+      "draft_response",
+      "verify_claims"
+    ],
+    "prohibited_nodes": [
+      "retrieve_customer_context",
+      "human_review_for_standard_query"
+    ],
+    "required_controls": [
+      "sql_validation",
+      "read_only_query",
+      "numeric_claim_verification"
+    ],
+    "acceptable_terminal_outcomes": [
+      "completed",
+      "safe_stop_if_sql_rejected"
+    ]
+  }
+}

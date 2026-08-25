@@ -1,0 +1,27 @@
+{
+  "framework_mapping": {
+    "selected_framework": "graph_based_agent_framework",
+    "graph_spec": "enterprise_support_workflow_v1",
+    "state_object": "WorkflowState",
+    "node_mapping": {
+      "validate_input": "validate_input_node",
+      "classify_intent": "classify_intent_node",
+      "retrieve_policy": "retrieve_policy_node",
+      "retrieve_customer_context": "retrieve_customer_context_node",
+      "propose_sql": "analytics_sql_agent_node",
+      "validate_sql": "validate_sql_node",
+      "execute_sql": "execute_sql_node",
+      "draft_response": "draft_response_node",
+      "verify_claims": "verify_claims_node",
+      "human_review": "human_review_node",
+      "release_response": "release_response_node"
+    },
+    "custom_extensions_required": [
+      "tool_gateway",
+      "artifact_store",
+      "approval_gate",
+      "trace_exporter",
+      "replay_safe_tool_stubs"
+    ]
+  }
+}

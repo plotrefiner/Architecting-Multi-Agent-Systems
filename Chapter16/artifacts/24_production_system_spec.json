@@ -1,0 +1,84 @@
+{
+  "production_system_spec": "enterprise_support_intelligence_v1",
+  "system_purpose": "Support policy-grounded customer-support assistance, case explanation, and approved analytics summaries.",
+  "architecture": {
+    "decision": "graph_based_multi_agent_workflow_with_deterministic_control",
+    "supported_paths": [
+      "policy_only",
+      "customer_case_explanation",
+      "analytics_question",
+      "human_review_required"
+    ],
+    "unsupported_paths": [
+      "autonomous_refund_approval",
+      "autonomous_policy_override",
+      "unrestricted_database_querying"
+    ]
+  },
+  "components": {
+    "controller": "workflow_controller",
+    "agents": [
+      "intent_router",
+      "analytics_sql_agent",
+      "response_writer_agent",
+      "claim_verifier_agent"
+    ],
+    "services": [
+      "policy_retrieval_service",
+      "customer_context_service",
+      "sql_validator",
+      "analytics_execution_service",
+      "human_review_service"
+    ],
+    "stores": [
+      "artifact_store",
+      "workflow_state_store",
+      "evaluation_dataset_store"
+    ]
+  },
+  "contracts": {
+    "messages": "versioned_structured_contracts",
+    "tools": "registered_tools_with_permissions",
+    "memory": "role_based_access",
+    "graph": "typed_nodes_guarded_edges",
+    "human_review": "scoped_review_packets_and_decisions"
+  },
+  "quality": {
+    "evaluation": [
+      "task",
+      "trajectory",
+      "tool_call",
+      "artifact",
+      "sql_validation",
+      "claim_verification",
+      "human_handoff"
+    ],
+    "datasets": [
+      "golden",
+      "synthetic",
+      "regression",
+      "negative_path"
+    ],
+    "release_gate": "enterprise_support_release_gate_v1"
+  },
+  "security": {
+    "controls": [
+      "input_validation",
+      "output_validation",
+      "sql_validation",
+      "tool_gateway",
+      "pii_redaction",
+      "prompt_injection_defense",
+      "memory_admission_policy",
+      "approval_gate"
+    ],
+    "audit": "required"
+  },
+  "deployment": {
+    "pattern": "hybrid_sync_async_workflow",
+    "rollout": "staged",
+    "monitoring": "required",
+    "replay": "sandbox_or_recorded_outputs_only",
+    "rollback": "kill_switches_and_versioned_configs"
+  }
+}

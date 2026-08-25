@@ -1,0 +1,36 @@
+{
+  "tool_registry": [
+    {
+      "tool": "policy_search",
+      "owner": "policy_retrieval_service",
+      "permission": "approved_policy_read",
+      "input_contract": "policy_search_request_v1",
+      "output_contract": "policy_findings_v1",
+      "data_classes": [
+        "approved_policy"
+      ]
+    },
+    {
+      "tool": "order_lookup",
+      "owner": "customer_context_service",
+      "permission": "restricted_customer_read",
+      "input_contract": "order_lookup_request_v1",
+      "output_contract": "order_summary_v1",
+      "data_classes": [
+        "order_summary",
+        "delivery_status",
+        "refund_status"
+      ]
+    },
+    {
+      "tool": "analytics_query_runner",
+      "owner": "analytics_execution_service",
+      "permission": "approved_read_only_analytics",
+      "input_contract": "validated_sql_query_v1",
+      "output_contract": "analytics_result_v1",
+      "data_classes": [
+        "aggregated_operational_metrics"
+      ]
+    }
+  ]
+}
