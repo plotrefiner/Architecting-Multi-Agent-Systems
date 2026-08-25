@@ -1,0 +1,37 @@
+{
+  "architecture_decision": {
+    "system": "enterprise_support_intelligence",
+    "decision": "graph_based_multi_agent_workflow_with_deterministic_control",
+    "selected_patterns": [
+      "deterministic_first_routing",
+      "enterprise_rag",
+      "tool_permission_gateway",
+      "sql_validation_gate",
+      "bounded_response_writer",
+      "claim_verifier",
+      "human_review_gate",
+      "audit_trail"
+    ],
+    "rejected_patterns": [
+      {
+        "pattern": "single_general_agent",
+        "reason": "too much tool access, weak auditability, unclear responsibility boundaries"
+      },
+      {
+        "pattern": "fully_autonomous_support_agent",
+        "reason": "human approval required for exceptions and customer-visible commitments"
+      },
+      {
+        "pattern": "runtime_agent_debate_for_policy_facts",
+        "reason": "policy truth should come from authoritative sources, not model consensus"
+      }
+    ],
+    "risk_level": "medium_high",
+    "human_authority_required_for": [
+      "refund_exception",
+      "policy_override",
+      "customer_visible_commitment",
+      "external_action"
+    ]
+  }
+}
